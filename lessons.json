@@ -6,7 +6,7 @@
   "categories": [
     { "id": "hormones", "label": "Hormones", "icon": "🧬", "status": "live" },
     { "id": "nutrition", "label": "Nutrition", "icon": "🍽️", "status": "live" },
-    { "id": "training", "label": "Entraînement", "icon": "🏋️", "status": "soon" }
+    { "id": "training", "label": "Entraînement", "icon": "🏋️", "status": "live" }
   ],
   "modules": [
     {
@@ -955,6 +955,198 @@
             ]},
             { "type": "quiz", "question": "Quel repère d'hydratation est conseillé ?", "options": ["Exactement 5 L/jour", "Boire à sa soif, surtout à l'entraînement", "Ne boire qu'aux repas"], "answer": 1, "explain": "Boire à sa soif est un repère fiable ; l'important est de bien s'hydrater autour de l'effort." },
             { "type": "quiz", "question": "Pourquoi surveiller l'hydratation à l'entraînement ?", "options": ["Ça n'a pas d'importance", "La déshydratation nuit à la performance", "Pour boire moins"], "answer": 1, "explain": "Une déshydratation, même légère, dégrade la performance et la récupération." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "category": "training",
+      "title": "Entraînement : construire du muscle intelligemment",
+      "subtitle": "Mécanismes, exécution, intensité et récupération",
+      "chapters": [
+        { "id": "t1", "icon": "🎯", "title": "Les fondamentaux de l'hypertrophie", "subtitle": "Ce qui fait grossir un muscle", "lessons": ["T01", "T02", "T03"] },
+        { "id": "t2", "icon": "⚙️", "title": "Exécution & technique", "subtitle": "Bien exécuter chaque répétition", "lessons": ["T04", "T05"] },
+        { "id": "t3", "icon": "🔥", "title": "Techniques d'intensification", "subtitle": "Aller plus loin quand ça stagne", "lessons": ["T06", "T07"] },
+        { "id": "t4", "icon": "😴", "title": "Récupération & progression durable", "subtitle": "Là où le muscle se construit vraiment", "lessons": ["T08", "T09", "T10", "T11"] }
+      ],
+      "lessons": [
+        {
+          "n": "T01",
+          "title": "Les deux moteurs de l'hypertrophie",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Un muscle grossit sous l'effet de deux stimuli complémentaires : la **tension mécanique** (soulever lourd, tension sur la fibre) et le **stress métabolique** (l'accumulation de métabolites, la congestion). Ce n'est pas l'un OU l'autre — c'est leur combinaison qui marche." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "86:10", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "C'est la complémentarité des deux stimuli qui donne le meilleur résultat : la tension mécanique et le stress métabolique. Pas l'un ou l'autre, les deux." },
+            { "type": "keypoints", "items": [
+              "Tension mécanique = charge lourde, tension sur la fibre.",
+              "Stress métabolique = métabolites + congestion (séries plus longues).",
+              "Le meilleur résultat vient de la COMBINAISON des deux."
+            ]},
+            { "type": "quiz", "question": "Quels sont les deux moteurs de l'hypertrophie ?", "options": ["Cardio et étirements", "Tension mécanique et stress métabolique", "Sommeil et créatine"], "answer": 1, "explain": "La croissance vient de la tension mécanique (charge) + du stress métabolique (congestion/métabolites)." },
+            { "type": "quiz", "question": "Faut-il choisir entre tension et stress métabolique ?", "options": ["Oui, l'un ou l'autre", "Non, c'est leur combinaison qui est la plus efficace", "Ni l'un ni l'autre"], "answer": 1, "explain": "Les deux stimuli sont complémentaires : c'est leur association qui donne le meilleur résultat." }
+          ]
+        },
+        {
+          "n": "T02",
+          "title": "Les zones de répétitions : à quoi elles servent",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Chaque plage de répétitions a un rôle. Comprendre ça t'évite de tout faire dans la même zone et de laisser des gains sur la table." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "38:24", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Chaque zone de reps a un rôle : les séries courtes, c'est la force et le recrutement ; les séries moyennes, c'est le sweet spot pour l'hypertrophie ; les séries longues, c'est le stress métabolique." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "48:12", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Quand je dis du lourd, je vise plutôt du 12 à 15 répétitions. Pas du 6-8, pas du 30 : pour moi, c'est le meilleur compromis entre mettre lourd et stimuler la production hormonale, la sécrétion de GH et de testostérone." },
+            { "type": "keypoints", "items": [
+              "Séries courtes (~1-5) : force et recrutement nerveux.",
+              "Séries moyennes (~6-15) : le meilleur pour l'hypertrophie.",
+              "Séries longues : stress métabolique (congestion)."
+            ]},
+            { "type": "quiz", "question": "Quelle zone de répétitions est le 'sweet spot' de l'hypertrophie ?", "options": ["Les séries très courtes (1-3)", "Les séries moyennes", "Les séries interminables"], "answer": 1, "explain": "Les séries moyennes sont le meilleur compromis pour la croissance musculaire." },
+            { "type": "quiz", "question": "À quoi servent surtout les séries très courtes et lourdes ?", "options": ["Au stress métabolique", "À la force et au recrutement nerveux", "À l'endurance"], "answer": 1, "explain": "Les séries courtes développent surtout la force et le recrutement des fibres." }
+          ]
+        },
+        {
+          "n": "T03",
+          "title": "La surcharge progressive : plusieurs leviers",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Pour progresser, le muscle doit être confronté à un stimulus **croissant**. Mais 'surcharge progressive' ne veut pas dire 'mettre plus lourd à chaque séance' : c'est plus riche que ça." },
+            { "type": "quote", "speaker": "AchZod", "source": "Nutrition & Musculation (invité)", "ts": "32:17", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Dj6VpDH6c5Y&t=1937s", "content": "La surcharge progressive, c'est plusieurs facteurs : la charge, mais aussi le tempo, le repos, le nombre de répétitions. Ce sont des facteurs d'intensité. Surcharger, c'est jouer sur un ou plusieurs de ces facteurs chaque semaine." },
+            { "type": "quote", "speaker": "AchZod / Florent Dorizon", "source": "Podcast avec Florent Dorizon", "ts": "24:09", "platform": "youtube", "url": "https://www.youtube.com/watch?v=MbUireV2Ggo&t=1449s", "content": "La surcharge progressive, c'est une évidence, mais pas à vie : au bout d'un moment, on va stagner. Ça fait 20 ans que je fais de la muscu." },
+            { "type": "keypoints", "items": [
+              "Leviers de surcharge : charge, tempo, repos, répétitions.",
+              "On joue sur un ou plusieurs de ces facteurs chaque semaine.",
+              "La progression linéaire n'est pas infinie : on finit par plafonner."
+            ]},
+            { "type": "quiz", "question": "La surcharge progressive, c'est uniquement…", "options": ["Mettre plus lourd", "Jouer sur charge, tempo, repos ou répétitions", "Faire plus de séances"], "answer": 1, "explain": "C'est augmenter l'intensité via un ou plusieurs facteurs (charge, tempo, repos, reps)." },
+            { "type": "quiz", "question": "La progression linéaire dure-t-elle indéfiniment ?", "options": ["Oui, à vie", "Non, on finit par stagner", "Oui si on dort bien"], "answer": 1, "explain": "Aucune progression n'est infinie : après un temps, il faut varier les leviers." }
+          ]
+        },
+        {
+          "n": "T04",
+          "title": "Bien s'entraîner : amplitude, étirement, tempo",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Avant d'ajouter du poids, il faut **bien exécuter**. Une répétition de qualité met le muscle sous tension sur toute son amplitude — c'est ça qui stimule, pas le fait de déplacer une charge n'importe comment." },
+            { "type": "quote", "speaker": "AchZod", "source": "Podcast : les erreurs qui freinent tes résultats", "ts": "27:31", "platform": "youtube", "url": "https://www.youtube.com/watch?v=r5MsZFJRqgA&t=1651s", "content": "Bien s'entraîner, ça veut dire : un mouvement avec une très bonne amplitude, un bon étirement, un tempo contrôlé." },
+            { "type": "keypoints", "items": [
+              "Amplitude complète : le muscle travaille sur toute sa longueur.",
+              "Étirement sous charge = fort stimulus d'hypertrophie.",
+              "Tempo contrôlé : on ne 'balance' pas la charge."
+            ]},
+            { "type": "quiz", "question": "Que signifie 'bien s'entraîner' selon cette leçon ?", "options": ["Soulever le plus lourd possible", "Amplitude complète, bon étirement, tempo contrôlé", "Faire un maximum de séries"], "answer": 1, "explain": "La qualité d'exécution (amplitude, étirement, tempo) prime sur la charge brute." },
+            { "type": "quiz", "question": "Pourquoi l'amplitude complète compte-t-elle ?", "options": ["Elle fait travailler le muscle sur toute sa longueur", "Elle permet de tricher", "Elle raccourcit la séance"], "answer": 0, "explain": "Une amplitude complète, avec étirement sous charge, maximise le stimulus." }
+          ]
+        },
+        {
+          "n": "T05",
+          "title": "Mettre du poids, pas brasser de l'air",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La qualité d'exécution ne veut pas dire charges ridicules. Pour stimuler la croissance ET le système hormonal, il faut des charges **réellement challengeantes** — tout en gardant le contrôle." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "33:29", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Il faut mettre du poids, c'est un fait. Le simple fait de mettre un poids léger, de faire comme certaines influenceuses — brasser de l'air avec très peu de charge — ne suffit pas. Il faut des charges assez importantes, avec un bon mouvement, et si triche il y a, qu'elle soit contrôlée." },
+            { "type": "keypoints", "items": [
+              "Charges légères 'pour la forme' = stimulus insuffisant.",
+              "Il faut des charges challengeantes, exécutées proprement.",
+              "Un peu de triche est ok si elle reste contrôlée et volontaire."
+            ]},
+            { "type": "quiz", "question": "Que critique cette leçon ?", "options": ["Les charges lourdes", "Le fait de 'brasser de l'air' avec des charges trop légères", "L'amplitude complète"], "answer": 1, "explain": "Des charges trop légères 'pour la forme' ne stimulent ni le muscle ni les hormones." },
+            { "type": "quiz", "question": "La triche à l'entraînement est…", "options": ["Toujours interdite", "Acceptable si contrôlée et volontaire", "La base de tout"], "answer": 1, "explain": "Une triche contrôlée peut servir ; c'est la triche subie/anarchique qui pose problème." }
+          ]
+        },
+        {
+          "n": "T06",
+          "title": "Les giant sets : tension prolongée + congestion",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le **giant set** (plusieurs exercices enchaînés sans repos sur un même muscle) est puissant parce qu'il combine les deux moteurs de l'hypertrophie en une seule salve." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "78:26", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Quand tu fais un giant set, plusieurs choses se passent en même temps. La tension mécanique est maintenue longtemps : 4 exercices enchaînés, c'est peut-être 60 à 90 secondes de tension continue. Et l'accumulation métabolique piège le sang dans le muscle : la congestion est énorme." },
+            { "type": "keypoints", "items": [
+              "Giant set = plusieurs exercices enchaînés sur un muscle, sans repos.",
+              "Tension continue prolongée (60-90 s) = tension mécanique élevée.",
+              "Congestion intense = stress métabolique fort. Les deux moteurs d'un coup."
+            ]},
+            { "type": "quiz", "question": "Pourquoi le giant set est-il efficace ?", "options": ["Il réduit le temps sous tension", "Il combine tension prolongée et forte congestion", "Il évite la fatigue"], "answer": 1, "explain": "Il cumule les deux stimuli : tension mécanique prolongée + stress métabolique (congestion)." },
+            { "type": "quiz", "question": "Un giant set enchaîne les exercices…", "options": ["Avec de longues pauses", "Sans repos, sur un même muscle", "Sur des muscles différents"], "answer": 1, "explain": "On enchaîne plusieurs exercices d'un même muscle sans repos pour maintenir la tension." }
+          ]
+        },
+        {
+          "n": "T07",
+          "title": "Drop sets & rest-pause : recruter toutes les fibres",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Quand un muscle stagne en travail classique, des techniques d'intensification permettent d'aller **chercher les fibres** que tu ne recrutes pas d'habitude — via le mécanisme de recrutement par la fatigue." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "84:12", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Si tu vois qu'en travaillant de manière classique un muscle ne se développe pas, passe au drop set, parce que tu as besoin que toutes les fibres soient stimulées. Autre technique, le rest-pause : tu fais ta série jusqu'à l'échec, tu poses la charge 15 secondes, tu reprends 2-3 reps, tu reposes 15 secondes, et tu repars — même charge, même tension mécanique." },
+            { "type": "keypoints", "items": [
+              "Drop set : à l'échec, tu baisses la charge et tu continues → toutes les fibres stimulées.",
+              "Rest-pause : échec → 15 s de repos → 2-3 reps → répéter, à charge égale.",
+              "Objectif : recruter par la fatigue les fibres (type 2X) non sollicitées."
+            ]},
+            { "type": "quiz", "question": "À quoi sert un drop set ?", "options": ["À se reposer davantage", "À stimuler toutes les fibres quand le travail classique stagne", "À soulever plus lourd"], "answer": 1, "explain": "En prolongeant l'effort au-delà de l'échec, on recrute les fibres habituellement épargnées." },
+            { "type": "quiz", "question": "En quoi consiste le rest-pause ?", "options": ["Longues pauses entre séries", "Échec → 15 s de repos → quelques reps → répéter", "Une seule répétition très lente"], "answer": 1, "explain": "On enchaîne mini-repos et quelques reps après l'échec, à charge et tension égales." }
+          ]
+        },
+        {
+          "n": "T08",
+          "title": "La récupération : là où le muscle se construit",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Le muscle ne grandit pas pendant la séance, mais **pendant la récupération**. Sans sommeil et nutrition suffisants, l'entraînement le plus intense ne construit rien." },
+            { "type": "quote", "speaker": "AchZod / Florent Dorizon", "source": "Podcast avec Florent Dorizon", "ts": "24:09", "platform": "youtube", "url": "https://www.youtube.com/watch?v=MbUireV2Ggo&t=1449s", "content": "Pour progresser, il faut une bonne alimentation, une bonne supplémentation, et surtout une bonne récupération — je parle de sommeil." },
+            { "type": "keypoints", "items": [
+              "La croissance a lieu au repos, pas pendant la séance.",
+              "Trio : alimentation + récupération + sommeil.",
+              "S'entraîner dur sans récupérer = surmenage sans résultats."
+            ]},
+            { "type": "quiz", "question": "Quand le muscle se construit-il ?", "options": ["Pendant la séance", "Pendant la récupération (sommeil, nutrition)", "Jamais"], "answer": 1, "explain": "L'entraînement crée le stimulus ; la construction se fait au repos, avec sommeil et nutrition." },
+            { "type": "quiz", "question": "Que manque-t-il si tu t'entraînes dur mais ne progresses pas ?", "options": ["Plus de séances", "Souvent la récupération / le sommeil", "Plus de poids seulement"], "answer": 1, "explain": "Sans récupération suffisante, le stimulus ne se transforme pas en muscle." }
+          ]
+        },
+        {
+          "n": "T09",
+          "title": "La fréquence : travailler un muscle assez souvent",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Un muscle stimulé une seule fois par semaine progresse lentement. La **fréquence** (nombre de fois où tu sollicites un muscle sur la semaine) est un levier majeur, souvent sous-exploité." },
+            { "type": "quote", "speaker": "AchZod", "source": "Nutrition & Musculation (invité)", "ts": "33:04", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Dj6VpDH6c5Y&t=1984s", "content": "Un muscle ne va pas beaucoup se développer si tu ne le travailles qu'une fois. En split, tu peux placer par exemple les pecs ou les épaules deux fois dans la semaine, tout en respectant les principes de base : le tempo, la fréquence." },
+            { "type": "keypoints", "items": [
+              "Un muscle travaillé 1×/semaine progresse peu.",
+              "Viser souvent 2 stimulations/semaine par muscle.",
+              "La fréquence est un principe de base, au même titre que le tempo."
+            ]},
+            { "type": "quiz", "question": "Pourquoi augmenter la fréquence par muscle ?", "options": ["Pour s'entraîner moins", "Car 1×/semaine développe peu un muscle", "Pour éviter la récupération"], "answer": 1, "explain": "Répartir le volume sur 2 séances/muscle stimule davantage la croissance." },
+            { "type": "quiz", "question": "Combien de fois viser par muscle et par semaine ?", "options": ["1 fois maximum", "Souvent 2 fois", "10 fois"], "answer": 1, "explain": "Deux stimulations hebdomadaires par muscle sont généralement plus efficaces qu'une seule." }
+          ]
+        },
+        {
+          "n": "T10",
+          "title": "Courbatures ≠ bon entraînement",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "'Plus j'ai mal, mieux j'ai travaillé' : c'est une croyance tenace… et fausse. Les courbatures signalent des dommages musculaires, mais ne sont **pas** un indicateur fiable d'une séance efficace." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "86:10", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "'Plus t'as mal, plus t'as bien travaillé' : la réalité est beaucoup plus nuancée. Les dommages musculaires activent en effet des processus de réparation, mais ce n'est pas pour autant un bon indicateur de la qualité de la séance." },
+            { "type": "keypoints", "items": [
+              "Courbatures = dommages musculaires, pas un score de qualité.",
+              "Tu peux très bien progresser sans être courbaturé.",
+              "Le vrai juge de paix : la progression (charges, reps) dans le temps."
+            ]},
+            { "type": "quiz", "question": "Les courbatures sont-elles un bon indicateur de séance efficace ?", "options": ["Oui, plus on a mal mieux c'est", "Non, ce n'est pas un indicateur fiable", "Uniquement pour les débutants"], "answer": 1, "explain": "Elles reflètent des dommages, pas la qualité réelle de la séance." },
+            { "type": "quiz", "question": "Quel est le vrai juge de paix d'un bon entraînement ?", "options": ["Le niveau de courbatures", "La progression dans le temps (charges, reps)", "La transpiration"], "answer": 1, "explain": "C'est la progression mesurable sur les semaines qui compte, pas la douleur." }
+          ]
+        },
+        {
+          "n": "T11",
+          "title": "Repérer le surentraînement",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "S'entraîner dur est bien ; dépasser sa capacité de récupération ne l'est pas. Un signal objectif et simple à suivre : ta **fréquence cardiaque au repos**." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "82:10", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=4930s", "content": "Si ta fréquence cardiaque au repos grimpe de 10 à 15 %, voire brutalement, c'est souvent le signal d'un stress aigu : soit un surentraînement, soit un manque de sommeil, une inflammation, ou même un stress psychique." },
+            { "type": "keypoints", "items": [
+              "FC de repos qui grimpe (+10-15 %) = signal d'alerte.",
+              "Causes : surentraînement, manque de sommeil, inflammation, stress mental.",
+              "Réponse : lever le pied (deload), dormir, gérer le stress."
+            ]},
+            { "type": "quiz", "question": "Quel signal simple peut trahir un surentraînement ?", "options": ["Une baisse de la fréquence cardiaque au repos", "Une hausse de la fréquence cardiaque au repos", "Rien de mesurable"], "answer": 1, "explain": "Une FC de repos qui grimpe de 10-15 % signale souvent un stress aigu / surentraînement." },
+            { "type": "quiz", "question": "Que faire face à ces signaux ?", "options": ["Augmenter le volume", "Lever le pied, dormir, gérer le stress", "Ignorer"], "answer": 1, "explain": "On récupère : deload, sommeil, gestion du stress, avant de repartir." }
           ]
         }
       ]
