@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f0b2e">
+<title>AchZod Academy — Apprends la nutrition</title>
+<link rel="manifest" href="manifest.json">
+<style>
+  :root{
+    --bg0:#0c0826; --bg1:#150f38; --bg2:#1d1547;
+    --purple:#a78bfa; --purple-d:#7c5cf0; --cyan:#5ee7f0;
+    --txt:#f2f0ff; --muted:#9a93c4; --line:rgba(167,139,250,.18);
+    --card:rgba(255,255,255,.04);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--txt);
+    background:radial-gradient(120% 80% at 50% 0%,#241a5c 0%,var(--bg1) 38%,var(--bg0) 100%) fixed;
+    min-height:100vh; overflow-x:hidden;
+  }
+  .app{max-width:480px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;padding:0 0 84px}
+  /* ---- top bar ---- */
+  .topbar{display:flex;align-items:center;gap:8px;padding:14px 16px 8px}
+  .back{font-size:24px;color:var(--muted);background:none;border:none;cursor:pointer;line-height:1;padding:4px}
+  .cats{display:flex;gap:18px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .cats::-webkit-scrollbar{display:none}
+  .cat{display:flex;flex-direction:column;align-items:center;gap:5px;background:none;border:none;cursor:pointer;flex:0 0 auto}
+  .cat .ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:22px;
+    background:var(--card);border:1px solid var(--line);transition:.2s}
+  .cat.active .ic{background:linear-gradient(135deg,var(--purple),var(--purple-d));border-color:transparent;
+    box-shadow:0 6px 20px rgba(124,92,240,.5)}
+  .cat .lbl{font-size:11px;color:var(--muted);font-weight:600}
+  .cat.active .lbl{color:var(--purple)}
+  .cat.soon{opacity:.45}
+  /* ---- hero ---- */
+  .hero{margin:14px 16px 6px;padding:2px;border-radius:20px;
+    background:linear-gradient(135deg,var(--purple),var(--cyan));}
+  .hero-in{background:var(--bg1);border-radius:18px;padding:18px 20px}
+  .hero .ey{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--cyan);text-transform:uppercase}
+  .hero h1{font-size:19px;line-height:1.25;margin:6px 0;color:#fff}
+  .hero p{font-size:13px;color:var(--muted);margin-bottom:14px}
+  .bar{height:7px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--purple),var(--cyan));width:0;transition:.5s}
+  .hero .pct{font-size:12px;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between}
+  .sec{padding:14px 16px 4px;font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--muted);text-transform:uppercase}
+  /* ---- chapter cards ---- */
+  .list{padding:4px 16px}
+  .chap{display:flex;align-items:center;gap:15px;width:100%;text-align:left;cursor:pointer;color:var(--txt);
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;transition:.15s}
+  .chap:hover{border-color:var(--purple-d);transform:translateY(-1px)}
+  .chap .cnum{flex:0 0 auto;position:relative;width:52px;height:52px}
+  .ring{transform:rotate(-90deg)}
+  .ring .bg{stroke:rgba(255,255,255,.1)} .ring .fg{stroke:url(#g);stroke-linecap:round;transition:.5s}
+  .chap .ci{position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+  .chap .cb{flex:1;min-width:0}
+  .chap .cb h3{font-size:16.5px;font-weight:700;line-height:1.25;color:var(--cyan)}
+  .chap .cb .csub{font-size:12.5px;color:var(--muted);margin-top:3px}
+  .chap .cb .cmeta{font-size:11.5px;color:var(--purple);margin-top:7px;font-weight:600}
+  .chap .chev{color:var(--purple);font-size:26px;font-weight:300;flex:0 0 auto}
+  .chap.done{border-color:rgba(52,211,153,.35)}
+  /* ---- lessons ---- */
+  .lesson{display:flex;align-items:center;gap:16px;padding:18px 4px;border-bottom:1px solid var(--line);
+    cursor:pointer;background:none;border-left:none;border-right:none;border-top:none;width:100%;text-align:left;color:var(--txt)}
+  .num{flex:0 0 auto;width:50px;height:50px;border-radius:50%;border:2px solid var(--purple-d);
+    display:grid;place-items:center;font-size:15px;font-weight:700;color:var(--purple);position:relative}
+  .lesson.done .num{background:linear-gradient(135deg,var(--purple),var(--purple-d));color:#fff;border-color:transparent}
+  .lesson.done .num span{visibility:hidden}
+  .lesson.done .num::after{content:"✓";position:absolute;font-size:19px;color:#fff}
+  .l-body{flex:1;min-width:0}
+  .l-body h3{font-size:16.5px;font-weight:700;line-height:1.25;margin-bottom:7px;color:#cbbcff}
+  .l-meta{font-size:11.5px;color:var(--muted)}
+  .chev{color:var(--purple);font-size:24px;font-weight:300;flex:0 0 auto}
+  /* ---- reader ---- */
+  .reader{position:fixed;inset:0;background:var(--bg0);z-index:50;display:flex;flex-direction:column;
+    transform:translateY(100%);transition:transform .32s cubic-bezier(.3,.8,.3,1);max-width:480px;margin:0 auto}
+  .reader.open{transform:none}
+  .r-head{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--line);
+    background:var(--bg1);position:sticky;top:0}
+  .r-head .close{font-size:26px;background:none;border:none;color:var(--muted);cursor:pointer;line-height:1}
+  .r-head .tag{font-size:11px;font-weight:700;color:var(--purple);background:rgba(124,92,240,.16);
+    padding:4px 10px;border-radius:99px}
+  .r-scroll{flex:1;overflow-y:auto;padding:22px 18px 40px}
+  .r-scroll h2{font-size:23px;line-height:1.25;margin-bottom:20px;color:var(--cyan)}
+  .blk{margin-bottom:18px}
+  .blk.text{font-size:16px;line-height:1.6;color:#e2deff}
+  .quote{background:linear-gradient(135deg,rgba(124,92,240,.14),rgba(94,231,240,.08));
+    border:1px solid var(--line);border-left:3px solid var(--purple);border-radius:14px;padding:16px}
+  .quote .who{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--purple);font-weight:700;margin-bottom:10px}
+  .quote .ts{background:rgba(255,255,255,.08);color:var(--muted);padding:2px 8px;border-radius:99px;font-size:11px;margin-left:auto}
+  .quote p{font-size:15.5px;line-height:1.6;font-style:italic;color:#f0eeff}
+  .quote a{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--cyan);
+    font-size:13px;font-weight:600;text-decoration:none}
+  .kp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .kp .t{font-size:12px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+  .kp li{list-style:none;font-size:15px;line-height:1.5;padding-left:22px;position:relative;margin-bottom:8px}
+  .kp li::before{content:"→";position:absolute;left:0;color:var(--purple)}
+  .kp li:last-child{margin-bottom:0}
+  .quiz{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .quiz .q{font-size:16px;font-weight:700;margin-bottom:14px}
+  .opt{display:block;width:100%;text-align:left;padding:13px 15px;margin-bottom:9px;border-radius:11px;
+    background:rgba(255,255,255,.04);border:1.5px solid var(--line);color:var(--txt);font-size:15px;cursor:pointer;transition:.15s}
+  .opt:hover{border-color:var(--purple-d)}
+  .opt.good{background:rgba(52,211,153,.16);border-color:#34d399;color:#a7f3d0}
+  .opt.bad{background:rgba(248,113,113,.14);border-color:#f87171;color:#fecaca}
+  .explain{font-size:14px;line-height:1.5;color:var(--muted);margin-top:10px;padding-top:12px;border-top:1px solid var(--line);display:none}
+  .explain.show{display:block}
+  .r-foot{padding:14px 18px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--bg1)}
+  .cta{width:100%;padding:16px;border:none;border-radius:14px;font-size:16px;font-weight:700;color:#fff;cursor:pointer;
+    background:linear-gradient(135deg,var(--purple),var(--purple-d));box-shadow:0 8px 24px rgba(124,92,240,.45)}
+  /* ---- bottom nav ---- */
+  .nav{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;display:flex;
+    background:rgba(15,11,46,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+    padding:10px 0 calc(8px + env(safe-area-inset-bottom))}
+  .nav button{flex:1;background:none;border:none;color:var(--muted);font-size:11px;font-weight:600;
+    display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+  .nav button.on{color:var(--purple)}
+  .nav .ni{font-size:21px}
+  /* ---- profil ---- */
+  .prof{padding:18px 16px}
+  .prof .avatar{width:72px;height:72px;border-radius:50%;margin:6px auto 10px;display:grid;place-items:center;font-size:34px;
+    background:linear-gradient(135deg,var(--purple),var(--purple-d));box-shadow:0 8px 24px rgba(124,92,240,.45)}
+  .prof h1{text-align:center;font-size:20px;margin-bottom:2px;color:#fff}
+  .prof .sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:18px}
+  .streak{background:linear-gradient(135deg,rgba(255,138,76,.18),rgba(124,92,240,.14));border:1px solid var(--line);
+    border-radius:18px;padding:20px;text-align:center;margin-bottom:14px}
+  .streak .n{font-size:42px;font-weight:800;color:#ff9a5a;line-height:1}
+  .streak .l{font-size:13px;color:var(--muted);margin-top:6px}
+  .tiles{display:flex;gap:12px;margin-bottom:16px}
+  .tile{flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center}
+  .tile .n{font-size:26px;font-weight:800;color:var(--cyan)}
+  .tile .l{font-size:12px;color:var(--muted);margin-top:3px}
+  .sec2{font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--muted);text-transform:uppercase;margin:6px 2px 10px}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+  .pcard .top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .pcard .ic{font-size:22px}
+  .pcard .nm{font-weight:700;flex:1;color:var(--txt)}
+  .pcard .pc{font-size:14px;color:var(--purple);font-weight:800}
+  .pcard .mt{margin-top:8px;color:var(--muted);font-size:12px}
+  .err{padding:40px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.6}
+  .err code{color:var(--cyan);background:rgba(94,231,240,.1);padding:2px 6px;border-radius:5px}
+</style>
+</head>
+<body>
+<svg width="0" height="0"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#5ee7f0"/></linearGradient></defs></svg>
+
+<div class="app">
+  <div class="topbar">
+    <button class="back" id="topBack" onclick="goBack()">←</button>
+    <div class="cats" id="cats"></div>
+  </div>
+  <div id="main"></div>
+</div>
+
+<div class="reader" id="reader">
+  <div class="r-head">
+    <button class="close" onclick="closeReader()">←</button>
+    <span class="tag" id="rTag">LEÇON</span>
+  </div>
+  <div class="r-scroll" id="rScroll"></div>
+  <div class="r-foot"><button class="cta" id="rCta" onclick="completeLesson()">Marquer comme terminé</button></div>
+</div>
+
+<div class="nav">
+  <button id="navLearn" class="on" onclick="setPage('learn')"><span class="ni">📚</span>Apprendre</button>
+  <button id="navProfile" onclick="setPage('profile')"><span class="ni">👤</span>Profil</button>
+</div>
+
+<script>
+const DONE_KEY='achzod_done_v1', ACT_KEY='achzod_days_v1', QUIZ_KEY='achzod_quiz_v1';
+let DATA=null, THEME=null, LMAP={}, view='chapters', curChapter=null, curLesson=null, page='learn';
+const done=new Set(JSON.parse(localStorage.getItem(DONE_KEY)||'[]'));
+const save=()=>localStorage.setItem(DONE_KEY,JSON.stringify([...done]));
+const isoDay=d=>d.toISOString().slice(0,10);
+function markActiveToday(){
+  const days=new Set(JSON.parse(localStorage.getItem(ACT_KEY)||'[]'));
+  days.add(isoDay(new Date()));
+  localStorage.setItem(ACT_KEY,JSON.stringify([...days]));
+}
+function computeStreak(){
+  const days=new Set(JSON.parse(localStorage.getItem(ACT_KEY)||'[]'));
+  let s=0, d=new Date();
+  if(!days.has(isoDay(d))) d.setDate(d.getDate()-1);   // tolère : pas encore actif aujourd'hui
+  while(days.has(isoDay(d))){ s++; d.setDate(d.getDate()-1); }
+  return s;
+}
+function addQuiz(ok){
+  const q=JSON.parse(localStorage.getItem(QUIZ_KEY)||'{"a":0,"c":0}');
+  q.a++; if(ok) q.c++;
+  localStorage.setItem(QUIZ_KEY,JSON.stringify(q));
+}
+const md=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const el=id=>document.getElementById(id);
+
+const SRC=new URLSearchParams(location.search).get('data')||'lessons.json';
+fetch(SRC).then(r=>r.json()).then(d=>{DATA=d;boot();})
+  .catch(()=>{el('main').innerHTML=
+    '<div class="err">Impossible de charger <code>'+SRC+'</code>.<br><br>Lance un serveur local :<br><code>cd learn && python3 -m http.server 8000</code><br>puis ouvre <code>localhost:8000</code></div>';});
+
+function boot(){
+  markActiveToday();
+  const firstLive=DATA.categories.find(c=>c.status==='live'&&DATA.modules.some(m=>m.category===c.id));
+  const mod=DATA.modules.find(m=>m.category===(firstLive&&firstLive.id))||DATA.modules[0];
+  setTheme(mod);
+}
+
+function setPage(p){
+  page=p;
+  el('navLearn').classList.toggle('on',p==='learn');
+  el('navProfile').classList.toggle('on',p==='profile');
+  renderMain(); window.scrollTo(0,0);
+}
+
+function renderProfile(){
+  let totalL=0,doneL=0;
+  const per=DATA.modules.map(m=>{
+    const cat=DATA.categories.find(c=>c.id===m.category)||{};
+    const t=m.lessons.length, n=m.lessons.filter(l=>done.has(l.n)).length;
+    totalL+=t; doneL+=n;
+    return {cat,t,n,pct:t?Math.round(n/t*100):0};
+  });
+  const streak=computeStreak();
+  const q=JSON.parse(localStorage.getItem(QUIZ_KEY)||'{"a":0,"c":0}');
+  el('main').innerHTML=`<div class="prof">
+    <div class="avatar">🏋️</div>
+    <h1>Ton profil</h1>
+    <div class="sub">AchZod Academy</div>
+    <div class="streak"><div class="n">🔥 ${streak}</div><div class="l">jour${streak>1?'s':''} d'affilée</div></div>
+    <div class="tiles">
+      <div class="tile"><div class="n">${doneL}/${totalL}</div><div class="l">leçons terminées</div></div>
+      <div class="tile"><div class="n">${q.c}</div><div class="l">quiz réussis</div></div>
+    </div>
+    <div class="sec2">Progression par thème</div>
+    ${per.map(p=>`<div class="pcard">
+      <div class="top"><span class="ic">${p.cat.icon||'📘'}</span><span class="nm">${p.cat.label||p.cat.id}</span><span class="pc">${p.pct}%</span></div>
+      <div class="bar"><i style="width:${p.pct}%"></i></div>
+      <div class="mt">${p.n} / ${p.t} leçons</div></div>`).join('')}
+  </div>`;
+}
+
+function setTheme(mod){
+  THEME=mod;
+  LMAP={}; THEME.lessons.forEach(l=>LMAP[l.n]=l);
+  // fallback : si pas de chapitres, un chapitre unique
+  if(!THEME.chapters) THEME.chapters=[{id:'all',icon:'🧬',title:THEME.title,subtitle:'',lessons:THEME.lessons.map(l=>l.n)}];
+  view='chapters'; curChapter=null;
+  renderCats(); renderMain(); window.scrollTo(0,0);
+}
+
+function switchCat(id){
+  const c=DATA.categories.find(x=>x.id===id);
+  if(!c||c.status==='soon') return;
+  const mod=DATA.modules.find(m=>m.category===id);
+  if(mod){ page='learn'; el('navLearn').classList.add('on'); el('navProfile').classList.remove('on'); setTheme(mod); }
+}
+
+function renderCats(){
+  el('cats').innerHTML=DATA.categories.map(c=>{
+    const hasMod=DATA.modules.some(m=>m.category===c.id);
+    const click=(c.status==='live'&&hasMod)?`onclick="switchCat('${c.id}')"`:'';
+    return `<button class="cat ${c.id===THEME.category?'active':''} ${c.status==='soon'?'soon':''}" ${click}>
+       <span class="ic">${c.icon}</span><span class="lbl">${c.label}</span></button>`;
+  }).join('');
+}
+
+function chapProgress(ch){const t=ch.lessons.length,n=ch.lessons.filter(x=>done.has(x)).length;return{t,n,pct:t?n/t:0};}
+
+function renderMain(){
+  if(page==='profile'){ el('topBack').style.visibility='hidden'; renderProfile(); return; }
+  el('topBack').style.visibility = view==='chapters' ? 'hidden' : 'visible';
+  if(view==='chapters') renderChapters(); else renderLessons();
+}
+
+function renderChapters(){
+  const tot=THEME.lessons.length, n=THEME.lessons.filter(l=>done.has(l.n)).length, pct=Math.round(n/tot*100);
+  let h=`<div class="hero"><div class="hero-in">
+      <div class="ey">Parcours</div>
+      <h1>${THEME.title}</h1><p>${THEME.subtitle}</p>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="pct"><span>${pct}% complété</span><span>${n} / ${tot} leçons</span></div>
+    </div></div>
+    <div class="sec">${THEME.chapters.length} chapitres</div><div class="list">`;
+  THEME.chapters.forEach((ch,i)=>{
+    const p=chapProgress(ch), C=2*Math.PI*23, off=C*(1-p.pct);
+    h+=`<button class="chap ${p.n===p.t?'done':''}" onclick="openChapter(${i})">
+      <div class="cnum">
+        <svg class="ring" width="52" height="52" viewBox="0 0 52 52">
+          <circle class="bg" cx="26" cy="26" r="23" fill="none" stroke-width="4"/>
+          <circle class="fg" cx="26" cy="26" r="23" fill="none" stroke-width="4"
+            stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/></svg>
+        <span class="ci">${p.n===p.t?'✅':ch.icon}</span>
+      </div>
+      <div class="cb"><h3>${i+1}. ${ch.title}</h3><div class="csub">${ch.subtitle||''}</div>
+        <div class="cmeta">${p.n}/${p.t} leçons${p.n===p.t?' · terminé':''}</div></div>
+      <span class="chev">›</span></button>`;
+  });
+  el('main').innerHTML=h+'</div>';
+}
+
+function renderLessons(){
+  const ch=curChapter, p=chapProgress(ch), pct=Math.round(p.pct*100);
+  let h=`<div class="hero"><div class="hero-in">
+      <div class="ey">Chapitre ${THEME.chapters.indexOf(ch)+1}</div>
+      <h1>${ch.icon} ${ch.title}</h1><p>${ch.subtitle||''}</p>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="pct"><span>${pct}% complété</span><span>${p.n} / ${p.t} leçons</span></div>
+    </div></div><div class="list" style="padding-top:8px">`;
+  ch.lessons.forEach((num,idx)=>{
+    const l=LMAP[num]; if(!l) return;
+    const q=l.blocks.filter(b=>b.type==='quote').length;
+    h+=`<button class="lesson ${done.has(l.n)?'done':''}" onclick="openReader('${l.n}')">
+       <span class="num"><span>${idx+1}</span></span>
+       <span class="l-body"><h3>${l.title}</h3><span class="l-meta">⏱ ${l.duration} · ${q} extrait(s) AchZod</span></span>
+       <span class="chev">›</span></button>`;
+  });
+  el('main').innerHTML=h+'</div>';
+}
+
+function openChapter(i){curChapter=THEME.chapters[i];view='lessons';el('main').scrollTop=0;window.scrollTo(0,0);renderMain();}
+function goBack(){if(view==='lessons'){view='chapters';curChapter=null;renderMain();}}
+
+function openReader(num){
+  curLesson=LMAP[num];
+  el('rTag').textContent='LEÇON '+curLesson.n;
+  el('rScroll').innerHTML='<h2>'+curLesson.title+'</h2>'+curLesson.blocks.map(renderBlock).join('');
+  el('rCta').textContent=done.has(curLesson.n)?'✓ Terminé — relire':'Marquer comme terminé';
+  el('reader').classList.add('open'); el('rScroll').scrollTop=0;
+}
+function closeReader(){el('reader').classList.remove('open');}
+function completeLesson(){done.add(curLesson.n);save();markActiveToday();renderMain();closeReader();}
+
+function renderBlock(b){
+  if(b.type==='text') return `<div class="blk text">${md(b.content)}</div>`;
+  if(b.type==='quote'){
+    const icon=b.platform==='spotify'?'🎧':'▶';
+    const link=b.platform==='spotify'?'Écouter sur Spotify':'Voir l\'extrait sur YouTube';
+    return `<div class="blk quote">
+      <div class="who">🎙 ${b.speaker} · ${b.source}<span class="ts">${b.ts}</span></div>
+      <p>« ${b.content} »</p>
+      <a href="${b.url}" target="_blank" rel="noopener">${icon} ${link}</a></div>`;
+  }
+  if(b.type==='keypoints') return `<div class="blk kp"><div class="t">À retenir</div><ul>${b.items.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div>`;
+  if(b.type==='quiz'){
+    const id='q'+Math.abs(b.question.length*31+b.answer);
+    return `<div class="blk quiz"><div class="q">🧠 ${b.question}</div>
+      ${b.options.map((o,i)=>`<button class="opt" onclick="answer(this,${i},${b.answer},'${id}')">${o}</button>`).join('')}
+      <div class="explain" id="${id}">${md(b.explain)}</div></div>`;
+  }
+  return '';
+}
+function answer(el_,i,correct,id){
+  const box=el_.parentElement;
+  if(box.dataset.done) return; box.dataset.done=1;
+  addQuiz(i===correct);
+  [...box.querySelectorAll('.opt')].forEach((o,j)=>{
+    if(j===correct)o.classList.add('good');
+    if(j===i&&i!==correct)o.classList.add('bad');
+    o.style.pointerEvents='none';
+  });
+  el(id).classList.add('show');
+}
+</script>
+</body>
+</html>

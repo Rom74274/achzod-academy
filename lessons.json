@@ -1,0 +1,963 @@
+{
+  "meta": {
+    "generated": "pilote-hormones-v2",
+    "note": "Contenu hybride : reformulation pédagogique + citations verbatim d'AchZod (corrections ASR mineures, sens préservé). Sources = 6 vidéos/podcasts différents."
+  },
+  "categories": [
+    { "id": "hormones", "label": "Hormones", "icon": "🧬", "status": "live" },
+    { "id": "nutrition", "label": "Nutrition", "icon": "🍽️", "status": "live" },
+    { "id": "training", "label": "Entraînement", "icon": "🏋️", "status": "soon" }
+  ],
+  "modules": [
+    {
+      "id": "hormones",
+      "category": "hormones",
+      "title": "Les hormones, le vrai pilote de ta composition corporelle",
+      "subtitle": "Comprends les mécanismes que 99% des coachs ignorent",
+      "chapters": [
+        { "id": "c1", "icon": "🎯", "title": "Les fondamentaux", "subtitle": "Le système hormonal et ses grands acteurs", "lessons": ["01", "16", "02", "03", "17", "32", "06"] },
+        { "id": "c2", "icon": "⚡", "title": "Insuline, glucides & timing", "subtitle": "Maîtriser ton carburant au quotidien", "lessons": ["04", "08", "11", "21"] },
+        { "id": "c3", "icon": "🔥", "title": "Métabolisme, thyroïde & faim", "subtitle": "Ce qui règle ta dépense d'énergie", "lessons": ["07", "13"] },
+        { "id": "c4", "icon": "🥗", "title": "Sèche, jeûne & recomposition", "subtitle": "Perdre du gras sans casser le métabolisme", "lessons": ["30", "31"] },
+        { "id": "c5", "icon": "🌙", "title": "Stress, sommeil & récupération", "subtitle": "Cortisol, mélatonine, catécholamines", "lessons": ["05", "09", "18", "33"] },
+        { "id": "c6", "icon": "🧔", "title": "Testostérone & œstrogènes", "subtitle": "L'équilibre androgènes / œstrogènes", "lessons": ["10", "15", "19", "14", "20", "29"] },
+        { "id": "c7", "icon": "🌸", "title": "Hormones féminines & cycle", "subtitle": "Comprendre le cycle menstruel", "lessons": ["26", "27", "28"] },
+        { "id": "c8", "icon": "🧪", "title": "Avancé : peptides & pharmacologie", "subtitle": "GH, sécrétagogues et GLP-1", "lessons": ["12", "22", "23"] },
+        { "id": "c9", "icon": "🩸", "title": "Passer à l'action", "subtitle": "Bilan sanguin et fondation", "lessons": ["24", "25"] }
+      ],
+      "lessons": [
+        {
+          "n": "01",
+          "title": "L'axe GH → IGF-1 : qui construit vraiment le muscle ?",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Tout le monde appelle la GH « l'hormone de croissance » et pense qu'elle fait grossir les muscles directement. **C'est faux.** Son rôle premier, c'est la **lipolyse** : mobiliser les graisses stockées pour en faire de l'énergie." },
+            { "type": "text", "content": "Le vrai constructeur, c'est l'**IGF-1**. La GH voyage jusqu'au foie, qui produit alors l'IGF-1 — lui seul stimule la synthèse protéique et la croissance du tissu musculaire. L'axe complet : hypothalamus → GHRH → hypophyse → **GH** → foie → **IGF-1**." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "4:28", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La GH n'est pas une hormone de croissance musculaire directe. Je répète, elle ne construit pas directement le muscle. La GH est avant tout le maître de la lipolyse, le maître de la dégradation des graisses. Son rôle principal c'est de mobiliser les acides gras stockés dans tes adipocytes. C'est pour ça que les gens qui ont des niveaux de GH élevés sont naturellement plus secs." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "5:06", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La GH voyage jusqu'au foie. Et dans le foie, elle déclenche la production d'une hormone différente : l'IGF-1, Insulin-like Growth Factor 1. L'IGF-1, c'est lui le vrai constructeur, le facteur X. C'est lui qui stimule la synthèse protéique musculaire, qui active les cellules satellites." },
+            { "type": "keypoints", "items": [
+              "La GH = hormone de la combustion des graisses, pas de construction directe.",
+              "L'IGF-1 (produit par le foie) = le vrai bâtisseur de muscle.",
+              "GH basse → stockage de gras plus facile."
+            ]},
+            { "type": "quiz", "question": "Quelle hormone construit directement le muscle ?", "options": ["La GH (hormone de croissance)", "L'IGF-1", "L'insuline"], "answer": 1, "explain": "La GH mobilise les graisses ; c'est l'IGF-1, produit par le foie sous l'action de la GH, qui stimule la synthèse protéique." },
+            { "type": "quiz", "question": "Quel est le rôle principal de la GH elle-même ?", "options": ["Construire le muscle directement", "Mobiliser les graisses (lipolyse)", "Stocker le glucose"], "answer": 1, "explain": "La GH est avant tout lipolytique ; la construction musculaire passe par l'IGF-1." }
+          ]
+        },
+        {
+          "n": "02",
+          "title": "Insuline vs GH : la balance antagoniste",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Insuline et GH sont des **hormones antagonistes** : elles fonctionnent comme une balance. Quand l'une monte, l'autre descend. Si tu baignes dans le sucre en permanence, ton insuline reste haute → ta GH reste au plancher." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "5:54", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "L'hyperglycémie chronique inhibe la sécrétion de GH. Pourquoi ? Parce que l'insuline et la GH sont des hormones antagonistes. Quand l'insuline est haute, la GH est basse. C'est une balance. Si tu baignes dans le sucre en permanence, l'insuline est chroniquement élevée et la GH reste au plancher." },
+            { "type": "text", "content": "Concrètement, ça se joue **la nuit**. Ton plus gros pic de GH a lieu pendant le sommeil profond — mais il a besoin que l'insuline soit déjà redescendue." },
+            { "type": "quote", "speaker": "AchZod & Pamz", "source": "PEPTIDES, HORMONES — avec Pamz_Therapy", "ts": "133:41", "platform": "youtube", "url": "https://www.youtube.com/watch?v=y8pUXIjG_7I&t=8021s", "content": "Si tu manges des glucides tard le soir, ta glycémie reste haute et ne redescend qu'à 2-3h du matin. Le problème, c'est que l'hormone de croissance est antagoniste à l'insuline : pour qu'elle monte la nuit, il faudrait que l'insuline soit déjà retombée. Là, tout se chevauche — l'hormone de croissance ne fait pas son travail, et l'insuline reste présente trop longtemps dans le corps." },
+            { "type": "keypoints", "items": [
+              "Insuline haute = GH basse (et inversement).",
+              "Le pic de GH se fait la nuit, en sommeil profond.",
+              "Glucides tard le soir → insuline qui traîne → pic de GH saboté."
+            ]},
+            { "type": "quiz", "question": "Pourquoi manger beaucoup de glucides tard le soir nuit à la GH ?", "options": ["Les glucides détruisent la GH", "L'insuline reste élevée la nuit et empêche le pic de GH", "La GH n'est sécrétée que le matin"], "answer": 1, "explain": "GH et insuline étant antagonistes, une insuline qui traîne la nuit empêche le pic de GH du sommeil profond." },
+            { "type": "quiz", "question": "Quand se produit ton principal pic de GH ?", "options": ["Après le déjeuner", "Pendant le sommeil profond", "À chaque repas"], "answer": 1, "explain": "Le plus gros pic de GH survient en sommeil profond — d'où l'importance du sommeil." }
+          ]
+        },
+        {
+          "n": "03",
+          "title": "Insuline & Glucagon : le balancier de ton métabolisme",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le **glucagon** est l'hormone miroir de l'insuline. Ensemble, ils régulent tout ton métabolisme énergétique comme un balancier : **l'insuline stocke, le glucagon libère.**" },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "18:04", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Le glucagon, c'est l'hormone miroir de l'insuline. Quand tu manges, ton pancréas sécrète de l'insuline pour faire baisser ta glycémie. L'insuline dit à tes cellules : prenez ce glucose, stockez-le. Le glucagon, c'est l'inverse. Quand ta glycémie descend, les cellules alpha de ton pancréas sécrètent du glucagon. Il dit à ton foie : libère le glucose que tu as stocké. L'insuline stocke, le glucagon libère, c'est un balancier perpétuel." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "18:57", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Qu'est-ce qu'il en résulte de la résistance à l'insuline ? Tu stockes du gras, tu n'arrives plus à le mobiliser. Le glucagon est étouffé. Et c'est le début de l'obésité, du diabète de type 2, du syndrome métabolique." },
+            { "type": "keypoints", "items": [
+              "Insuline = stockage ; Glucagon = libération.",
+              "Le balancier insuline/glucagon régule toute ton énergie.",
+              "Résistance à l'insuline = gras stocké + glucagon étouffé."
+            ]},
+            { "type": "quiz", "question": "Quel est le rôle du glucagon ?", "options": ["Stocker le glucose dans les cellules", "Libérer le glucose stocké par le foie", "Bloquer la lipolyse"], "answer": 1, "explain": "Le glucagon est le miroir de l'insuline : quand la glycémie baisse, il ordonne au foie de relâcher le glucose stocké." },
+            { "type": "quiz", "question": "Comment résumer le couple insuline / glucagon ?", "options": ["Les deux stockent", "L'insuline stocke, le glucagon libère", "Les deux libèrent"], "answer": 1, "explain": "C'est un balancier perpétuel : l'insuline range l'énergie, le glucagon la relâche." }
+          ]
+        },
+        {
+          "n": "04",
+          "title": "GLP-1 : comment Ozempic coupe la faim",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le **GLP-1** (glucagon-like peptide 1) est une incrétine produite naturellement par ton intestin quand tu manges. C'est la molécule que des médicaments comme Ozempic (sémaglutide) imitent." },
+            { "type": "text", "content": "Il agit de **trois façons** : il ralentit la vidange gastrique, il agit sur les centres de satiété de l'hypothalamus, et il stimule l'insuline **de manière glucose-dépendante** (seulement quand la glycémie est haute → moins de risque d'hypoglycémie)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "16:46", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Le GLP-1 fait trois choses. Elle ralentit la vidange gastrique : ton estomac se vide plus lentement, tu te sens rassasié plus longtemps. Elle agit sur le cerveau, sur les centres de satiété dans l'hypothalamus : ce n'est pas juste « j'ai l'estomac plein », c'est « je n'ai littéralement pas faim ». Et elle améliore la sensibilité à l'insuline." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "19:50", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Il stimule la sécrétion d'insuline de manière glucose-dépendante. Ça veut dire qu'il ne pousse l'insuline que quand ta glycémie est élevée. Donc moins de risque d'hypoglycémie qu'avec l'insuline exogène." },
+            { "type": "keypoints", "items": [
+              "GLP-1 = incrétine intestinale, imitée par Ozempic.",
+              "3 actions : vidange gastrique ralentie + satiété centrale + insuline glucose-dépendante.",
+              "« Glucose-dépendant » = il n'active l'insuline que si la glycémie est haute."
+            ]},
+            { "type": "quiz", "question": "Pourquoi le GLP-1 limite le risque d'hypoglycémie ?", "options": ["Il bloque totalement l'insuline", "Il stimule l'insuline seulement quand la glycémie est élevée", "Il augmente la glycémie en continu"], "answer": 1, "explain": "Son action est glucose-dépendante : pas de glycémie haute, pas de poussée d'insuline." },
+            { "type": "quiz", "question": "Où le GLP-1 agit-il pour couper la faim ?", "options": ["Dans l'estomac uniquement", "Sur les centres de satiété de l'hypothalamus", "Dans les muscles"], "answer": 1, "explain": "Il agit sur le cerveau (hypothalamus) : ce n'est pas 'estomac plein', c'est 'pas faim du tout'." }
+          ]
+        },
+        {
+          "n": "05",
+          "title": "Cortisol : l'hormone du stress qui sabote ta GH",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le **cortisol** est l'hormone du stress. Élevé en permanence, il **supprime la sécrétion de GH**. C'est un mécanisme de survie : « ce n'est pas le moment de grandir, c'est le moment de survivre »." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "6:12", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Dans le stress chronique, le cortisol élevé en permanence supprime la sécrétion de GH. C'est un mécanisme de survie. L'alcool perturbe le sommeil profond, il augmente le cortisol, impacte directement la sécrétion de GH. Même 2-3 verres le soir suffisent à réduire ton pic nocturne." },
+            { "type": "text", "content": "Le levier pratique : les **glucides post-entraînement**. En faisant monter l'insuline au bon moment, ils font redescendre le cortisol." },
+            { "type": "quote", "speaker": "AchZod & Nassim Sahili", "source": "Podcast avec Jimmy Mohamed & Nassim Sahili", "ts": "57:49", "platform": "youtube", "url": "https://www.youtube.com/watch?v=vcbo34k4PeQ&t=3469s", "content": "Consommer des glucides dans les heures qui suivent ton entraînement, c'est la meilleure façon de faire baisser le taux de cortisol. Parce que la consommation de glucides provoque une sécrétion d'insuline, et cette sécrétion d'insuline s'accompagne d'une baisse de la sécrétion de cortisol." },
+            { "type": "keypoints", "items": [
+              "Cortisol chronique = GH supprimée (mode survie).",
+              "Alcool = double peine : sommeil dégradé + cortisol en hausse.",
+              "Glucides post-training → insuline → cortisol qui redescend."
+            ]},
+            { "type": "quiz", "question": "Comment les glucides post-entraînement aident à baisser le cortisol ?", "options": ["Ils bloquent directement le cortisol", "Ils déclenchent l'insuline, qui fait baisser le cortisol", "Ils augmentent la GH qui détruit le cortisol"], "answer": 1, "explain": "Les glucides provoquent une sécrétion d'insuline, et cette montée d'insuline s'accompagne d'une baisse du cortisol." },
+            { "type": "quiz", "question": "Pourquoi l'alcool le soir sabote-t-il ta GH ?", "options": ["Il augmente la mélatonine", "Il élève le cortisol et casse le sommeil profond", "Il n'a aucun effet hormonal"], "answer": 1, "explain": "L'alcool monte le cortisol et dégrade le sommeil profond, réduisant le pic nocturne de GH." }
+          ]
+        },
+        {
+          "n": "06",
+          "title": "Les 4 hormones anabolisantes vs catabolisantes",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Pour piloter ta composition corporelle, il faut connaître les deux camps. Le corps a **4 hormones anabolisantes** (construction) et **4 catabolisantes** (dégradation)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Podcast avec Jimmy Mohamed & Nassim Sahili", "ts": "65:16", "platform": "youtube", "url": "https://www.youtube.com/watch?v=vcbo34k4PeQ&t=3916s", "content": "Le corps humain a quatre hormones anabolisantes et quatre hormones catabolisantes. Anabolisantes : testostérone, hormone de croissance, IGF-1, insuline." },
+            { "type": "text", "content": "Et attention au raccourci sur la GH : son effet anabolisant passe surtout par sa capacité à **protéger** le muscle." },
+            { "type": "quote", "speaker": "AchZod", "source": "Œstrogènes, Testostérone, Trenbolone et métabolisme", "ts": "38:55", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Z5gjTEbD90Q&t=2335s", "content": "« Hormone de croissance », c'est un terme un peu trompeur, parce qu'elle n'est pas si forte sur la croissance elle-même. Son intérêt, c'est qu'elle réduit la dégradation musculaire en inhibant le cortisol, l'hormone catabolique." },
+            { "type": "keypoints", "items": [
+              "Anabolisantes : testostérone, GH, IGF-1, insuline.",
+              "La GH protège le muscle en freinant le cortisol.",
+              "L'insuline est anabolisante… mais oriente vers le muscle OU le gras selon le contexte."
+            ]},
+            { "type": "quiz", "question": "Laquelle de ces hormones est anabolisante ?", "options": ["Le cortisol", "L'insuline", "Le glucagon"], "answer": 1, "explain": "L'insuline fait partie des 4 hormones anabolisantes (avec testo, GH, IGF-1). Cortisol et glucagon sont plutôt catabolisants." },
+            { "type": "quiz", "question": "Laquelle N'EST PAS anabolisante ?", "options": ["La testostérone", "L'IGF-1", "Le cortisol"], "answer": 2, "explain": "Le cortisol est catabolisant ; testostérone, GH, IGF-1 et insuline sont les 4 anabolisantes." }
+          ]
+        },
+        {
+          "n": "07",
+          "title": "La thyroïde : le thermostat de ton métabolisme",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Avant même les hormones sexuelles, ce sont les **hormones thyroïdiennes** qui fixent le rythme de base de ton métabolisme, via la **thermogénèse** (la production de chaleur)." },
+            { "type": "quote", "speaker": "AchZod", "source": "PEPTIDES, GLUCIDES, INSULINE : le podcast", "ts": "44:36", "platform": "youtube", "url": "https://www.youtube.com/watch?v=PQQointuDgE&t=2676s", "content": "Les hormones thyroïdiennes, ce sont celles qui régulent la thermogénèse, la production de chaleur. C'est la base du métabolisme. Tu as les hormones sexuelles, testostérone, œstradiol… mais les hormones thyroïdiennes, c'est vraiment le socle." },
+            { "type": "text", "content": "C'est pour ça qu'un métabolisme « lent » n'est pas qu'une histoire de calories : si ta dépense réelle s'effondre sous le théorique, la thyroïde est souvent en cause." },
+            { "type": "quote", "speaker": "AchZod", "source": "Métabolisme lent ou cassé ?", "ts": "71:59", "platform": "youtube", "url": "https://www.youtube.com/watch?v=k68jMjPG0Ec&t=4319s", "content": "Si ta dépense énergétique réelle est bien en dessous du théorique, ça peut signaler un problème de thyroïde : les hormones thyroïdiennes régulent ta température corporelle. Un souci de température, c'est souvent un souci thyroïdien." },
+            { "type": "keypoints", "items": [
+              "Les hormones thyroïdiennes = thermostat / base du métabolisme.",
+              "Elles régulent la thermogénèse et la température corporelle.",
+              "Métabolisme anormalement bas → piste thyroïde à explorer."
+            ]},
+            { "type": "quiz", "question": "Que régulent principalement les hormones thyroïdiennes ?", "options": ["La synthèse protéique musculaire", "La thermogénèse et le métabolisme de base", "La satiété"], "answer": 1, "explain": "La thyroïde pilote la thermogénèse (production de chaleur) et donc le rythme de base du métabolisme." },
+            { "type": "quiz", "question": "Un métabolisme anormalement bas doit faire penser à…", "options": ["La thyroïde", "Les biceps", "La vitamine C"], "answer": 0, "explain": "Une dépense réelle très en dessous du théorique oriente souvent vers un souci thyroïdien." }
+          ]
+        },
+        {
+          "n": "08",
+          "title": "Résistance à l'insuline : comment elle s'installe",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "La **résistance à l'insuline** n'arrive pas du jour au lendemain. Elle s'installe quand tu sollicites l'insuline trop fort, trop souvent — jusqu'à ce que tes cellules deviennent « sourdes » à son signal." },
+            { "type": "quote", "speaker": "AchZod", "source": "PEPTIDES, GLUCIDES, INSULINE : le podcast", "ts": "67:57", "platform": "youtube", "url": "https://www.youtube.com/watch?v=PQQointuDgE&t=4077s", "content": "Un aliment à index glycémique élevé sans bol alimentaire complet — soda, bonbons — fait monter ta glycémie d'un coup. Le corps est alors obligé de sécréter beaucoup plus fortement de l'insuline pour ensuite la faire redescendre." },
+            { "type": "quote", "speaker": "AchZod", "source": "PODCAST 1000% : Insuline, la clef", "ts": "12:05", "platform": "youtube", "url": "https://www.youtube.com/watch?v=zvdDspzIdUk&t=725s", "content": "Quand le glucose n'arrive plus à entrer dans les cellules, le corps génère de plus en plus d'insuline pour compenser. La résistance à l'insuline s'installe progressivement — par une alimentation déséquilibrée accumulée pendant des années, avec aussi une part de génétique." },
+            { "type": "text", "content": "Le meilleur rempart : la **masse musculaire**. Le muscle est un énorme « réservoir » à glucose — plus tu en as, mieux tu encaisses les glucides sans surcharger l'insuline." },
+            { "type": "keypoints", "items": [
+              "Pics de glycémie répétés (sucres rapides isolés) → insuline sursollicitée.",
+              "À terme, les cellules deviennent résistantes → le corps sécrète toujours plus d'insuline.",
+              "Plus de masse musculaire = meilleure sensibilité à l'insuline."
+            ]},
+            { "type": "quiz", "question": "Qu'est-ce qui aide le plus à se prémunir de la résistance à l'insuline ?", "options": ["Manger plus de sucres rapides", "Avoir plus de masse musculaire", "Supprimer totalement les glucides"], "answer": 1, "explain": "Le muscle agit comme un réservoir à glucose : plus de masse musculaire = meilleure sensibilité à l'insuline." },
+            { "type": "quiz", "question": "Comment s'installe la résistance à l'insuline ?", "options": ["En une seule nuit", "Par des pics de glycémie répétés sur des années", "En mangeant des légumes"], "answer": 1, "explain": "Des sollicitations répétées et excessives de l'insuline rendent peu à peu les cellules 'sourdes' à son signal." }
+          ]
+        },
+        {
+          "n": "09",
+          "title": "La cascade hormonale du sommeil (mélatonine)",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "S'endormir, ce n'est pas qu'« être fatigué » : c'est une **cascade hormonale** précise que ton corps déclenche chaque soir, et qui conditionne ta récupération et ton pic de GH nocturne." },
+            { "type": "quote", "speaker": "AchZod", "source": "Rétatrutide, sucre, jeûne : les 4 vérités", "ts": "53:47", "platform": "youtube", "url": "https://www.youtube.com/watch?v=RSXPcnKBSEw&t=3227s", "content": "Quand tu te prépares à dormir, ta température centrale corporelle baisse de 0,5 à 1°C, ton système nerveux bascule du sympathique vers le parasympathique, la mélatonine est sécrétée progressivement et la dopamine diminue. C'est toute cette cascade qui t'endort." },
+            { "type": "text", "content": "Le saboteur n°1 : les **glucides tardifs**. Une glycémie encore haute à l'heure du coucher perturbe à la fois la mélatonine et l'hormone de croissance." },
+            { "type": "quote", "speaker": "AchZod", "source": "PODCAST 1000% : Insuline, la clef", "ts": "93:49", "platform": "youtube", "url": "https://www.youtube.com/watch?v=zvdDspzIdUk&t=5629s", "content": "Si tu manges tes glucides à 21h, 23h, ta glycémie sera encore haute tard. Du coup ça va perturber ta sécrétion de mélatonine et perturber ta sécrétion d'hormone de croissance." },
+            { "type": "keypoints", "items": [
+              "S'endormir = cascade : température qui baisse + parasympathique + mélatonine + dopamine qui chute.",
+              "Glycémie haute au coucher → mélatonine ET GH perturbées.",
+              "Lumière/obscurité pilotent l'horloge : écrans et lumière forte retardent la mélatonine."
+            ]},
+            { "type": "quiz", "question": "Pourquoi manger des glucides juste avant de dormir nuit au sommeil ?", "options": ["Ça n'a aucun effet", "La glycémie haute perturbe mélatonine et hormone de croissance", "Ça augmente la mélatonine"], "answer": 1, "explain": "Une glycémie encore élevée au coucher perturbe la sécrétion de mélatonine et le pic nocturne de GH." },
+            { "type": "quiz", "question": "Qu'est-ce qui pilote ton horloge du sommeil ?", "options": ["La lumière et l'obscurité", "La quantité de protéines", "Le nombre de pas"], "answer": 0, "explain": "Lumière/obscurité règlent la sécrétion de mélatonine ; la lumière forte des écrans la retarde." }
+          ]
+        },
+        {
+          "n": "10",
+          "title": "Testostérone : surtout une hormone anti-catabolique",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "On imagine la testostérone comme un pur moteur de construction musculaire. En réalité, une grande partie de son effet vient de son rôle **anti-catabolique** : elle freine la dégradation du muscle en s'opposant au cortisol." },
+            { "type": "quote", "speaker": "AchZod", "source": "Biomécanique Podcast #129", "ts": "44:06", "platform": "youtube", "url": "https://www.youtube.com/watch?v=LGp1ZaXcE_E&t=2646s", "content": "Contrairement à ce qu'on croit, dans l'action des stéroïdes, c'est l'anti-catabolisme qui prime : quand tu prends de la testostérone, ton cortisol et ton catabolisme chutent." },
+            { "type": "quote", "speaker": "AchZod", "source": "Nutrition & Musculation (invité)", "ts": "8:02", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Dj6VpDH6c5Y&t=482s", "content": "Si ta prise de muscle est anormalement lente alors que ta diète et ton entraînement sont bons, regarde du côté des hormones : soit la testostérone, l'hormone qui préserve et crée le muscle, soit le cortisol." },
+            { "type": "keypoints", "items": [
+              "Testostérone = construit le muscle MAIS surtout le protège (anti-catabolisme).",
+              "Elle agit en s'opposant au cortisol, l'hormone catabolique.",
+              "Progrès anormalement lents malgré diète + training carrés → piste hormonale (testo/cortisol)."
+            ]},
+            { "type": "quiz", "question": "Quel est un rôle majeur (et sous-estimé) de la testostérone ?", "options": ["Augmenter le cortisol", "Freiner la dégradation musculaire (anti-catabolisme)", "Ralentir le métabolisme"], "answer": 1, "explain": "Au-delà de la construction, la testostérone protège le muscle en s'opposant au cortisol." },
+            { "type": "quiz", "question": "La testostérone freine le catabolisme en s'opposant à…", "options": ["l'insuline", "au cortisol", "à la GH"], "answer": 1, "explain": "Elle contre le cortisol, l'hormone catabolique, ce qui protège la masse musculaire." }
+          ]
+        },
+        {
+          "n": "11",
+          "title": "Ton horloge interne pilote ta sensibilité à l'insuline",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Ta **sensibilité à l'insuline n'est pas constante** dans la journée : elle suit ton rythme circadien. Tu gères mieux les glucides quand tu es actif et en pleine lumière, moins bien à l'approche de la nuit." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Whey, cheatmeal, calories", "ts": "7:23", "platform": "youtube", "url": "https://www.youtube.com/watch?v=aI2QmCoDo2o&t=443s", "content": "Il y a quelque chose qui s'appelle le rythme circadien, qui fonctionne avec la lumière, l'obscurité, les hormones, l'insuline. Et plus tu t'approches de la nuit, plus ta gestion des glucides change." },
+            { "type": "text", "content": "Le levier le plus puissant reste le **timing péri-entraînement** : autour de la séance, l'insuline modérément élevée devient ton alliée anti-catabolique." },
+            { "type": "quote", "speaker": "AchZod", "source": "Rétatrutide, sucre, jeûne : les 4 vérités", "ts": "41:43", "platform": "youtube", "url": "https://www.youtube.com/watch?v=RSXPcnKBSEw&t=2503s", "content": "Quand l'insuline est modérément haute pendant et après l'effort, ton corps dégrade beaucoup moins son propre muscle. Si en plus tu as des acides aminés, tu mets toutes les chances de ton côté pour limiter le catabolisme." },
+            { "type": "keypoints", "items": [
+              "Sensibilité à l'insuline = meilleure en journée/à l'effort, moindre la nuit.",
+              "Place tes plus gros apports de glucides autour de l'entraînement.",
+              "Autour de la séance, l'insuline protège le muscle (anti-catabolisme)."
+            ]},
+            { "type": "quiz", "question": "Quand placer idéalement tes plus gros apports de glucides ?", "options": ["Juste avant de dormir", "Autour de l'entraînement", "Peu importe le moment"], "answer": 1, "explain": "La sensibilité à l'insuline est meilleure autour de l'effort, où l'insuline devient anti-catabolique." },
+            { "type": "quiz", "question": "Ta sensibilité à l'insuline est plutôt…", "options": ["Constante 24h/24", "Meilleure en journée / à l'effort, moindre la nuit", "Meilleure la nuit"], "answer": 1, "explain": "Elle suit le rythme circadien : meilleure quand tu es actif et en pleine lumière." }
+          ]
+        },
+        {
+          "n": "12",
+          "title": "Peptides & sécrétagogues : comment on stimule la GH",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Un **sécrétagogue** est une substance qui pousse une glande à sécréter une hormone. Les sécrétagogues de GH exploitent un mécanisme naturel : ils imitent la **ghréline** (l'hormone de la faim), qui — surprise — déclenche aussi la sécrétion de GH." },
+            { "type": "quote", "speaker": "AchZod", "source": "Le cercle vicieux qui détruit tes résultats", "ts": "35:26", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Cp0OOE_FR9s&t=2126s", "content": "Quand la ghréline augmente, elle envoie un signal à l'hypothalamus, qui envoie un signal à l'hypophyse, qui libère de la GH. C'est le mécanisme naturel du corps. Les GHRP imitent la ghréline : ils activent directement l'hypophyse, qui libère immédiatement de la GH." },
+            { "type": "text", "content": "Tous les peptides ne se valent pas : certains font grimper le cortisol (catabolique). Le plus « propre » est l'**ipamoréline**, très sélective." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "12:58", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Les GHRP n'imitent pas la GHRH, ils imitent la ghréline. La ghréline, c'est l'hormone de la faim, mais elle fait aussi sécréter la GH, par un récepteur différent. Le plus propre de tous, c'est l'ipamoréline : elle stimule la GH de manière très sélective, avec un impact minimal sur le cortisol et la prolactine — contrairement à d'autres GHRP qui augmentent le cortisol, ce qui est catabolique." },
+            { "type": "keypoints", "items": [
+              "Sécrétagogue = pousse une glande à sécréter (ici la GH).",
+              "Les GHRP imitent la ghréline → hypophyse → libération de GH.",
+              "Ipamoréline = la plus sélective ; certains GHRP montent le cortisol (catabolique)."
+            ]},
+            { "type": "quiz", "question": "Quelle hormone les sécrétagogues de type GHRP imitent-ils ?", "options": ["L'insuline", "La ghréline", "Le cortisol"], "answer": 1, "explain": "Les GHRP imitent la ghréline (hormone de la faim), qui déclenche aussi la sécrétion de GH via l'hypophyse." },
+            { "type": "quiz", "question": "Quel sécrétagogue est réputé le plus 'propre' (peu de cortisol) ?", "options": ["Le GHRP-6", "L'ipamoréline", "Aucun n'est sélectif"], "answer": 1, "explain": "L'ipamoréline stimule la GH de façon sélective, avec un impact minimal sur cortisol et prolactine." }
+          ]
+        },
+        {
+          "n": "13",
+          "title": "Leptine : le thermostat de tes réserves de gras",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La **leptine** est produite par tes cellules graisseuses : elle dit à ton cerveau « les réserves sont pleines ». Quand tu perds du gras, elle chute — et ton cerveau enclenche un mode économie d'énergie." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ Métabolisme : tout ce que tu crois savoir", "ts": "10:01", "platform": "youtube", "url": "https://www.youtube.com/watch?v=_6JNRHWc0jw&t=601s", "content": "Quand tu perds du gras, la leptine chute et ton cerveau reçoit le message inverse : alerte, les réserves baissent, on lève le pied. Et là c'est une cascade : ton cerveau réduit le signal vers ta thyroïde, du coup tu produis moins de T3, l'hormone qui règle ton chauffage métabolique." },
+            { "type": "text", "content": "C'est le mécanisme derrière le « métabolisme qui s'adapte » en sèche prolongée. Sa jumelle est la **ghréline**, l'hormone de la faim : leptine = satiété/réserves, ghréline = appétit." },
+            { "type": "keypoints", "items": [
+              "Leptine = signal « réserves pleines » (produite par le gras).",
+              "Perte de gras → leptine chute → thyroïde ↓ → moins de T3 → métabolisme ralentit.",
+              "Ghréline = l'hormone miroir, celle de la faim."
+            ]},
+            { "type": "quiz", "question": "Que déclenche une chute de leptine en sèche ?", "options": ["Une accélération du métabolisme", "Un ralentissement (moins de T3 via la thyroïde)", "Une hausse de la testostérone"], "answer": 1, "explain": "Leptine basse → le cerveau réduit le signal thyroïdien → moins de T3 → métabolisme qui ralentit (mode économie)." },
+            { "type": "quiz", "question": "Quelle est l'hormone miroir de la leptine ?", "options": ["La ghréline (l'hormone de la faim)", "Le cortisol", "L'IGF-1"], "answer": 0, "explain": "Leptine = signal de satiété/réserves ; ghréline = signal de faim." }
+          ]
+        },
+        {
+          "n": "14",
+          "title": "Œstrogènes & aromatase : pourquoi le gras déséquilibre tes hormones",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Une partie de ta testostérone est convertie en **œstrogènes** (estradiol) par une enzyme : l'**aromatase**. Or l'aromatase est très présente dans le **tissu graisseux** — donc plus tu as de masse grasse, plus tu convertis." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Testostérone et prise de sang", "ts": "6:40", "platform": "youtube", "url": "https://www.youtube.com/watch?v=G3VpaDrWJGo&t=400s", "content": "Chez celui qui porte beaucoup de masse grasse, l'aromatase est plus active : il y a une plus grosse conversion de testostérone en estradiol. C'est pour ça que deux hommes produisant la même quantité de testostérone peuvent vivre des réalités opposées." },
+            { "type": "text", "content": "L'autre moitié du problème, c'est l'**élimination** des œstrogènes. Elle dépend d'une enzyme (la COMT) dont le cofacteur clé est le **magnésium**." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "44:23", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La COMT, c'est l'enzyme qui dégrade la dopamine, la noradrénaline et les œstrogènes. Son cofacteur essentiel, c'est le magnésium. Pas de magnésium, pas de COMT fonctionnelle — donc pas d'élimination propre des œstrogènes." },
+            { "type": "keypoints", "items": [
+              "Aromatase = convertit la testostérone en estradiol, surtout dans le gras.",
+              "Plus de masse grasse = plus de conversion = ratio testo/œstrogènes dégradé.",
+              "Le magnésium est indispensable pour éliminer les œstrogènes (via la COMT)."
+            ]},
+            { "type": "quiz", "question": "Pourquoi la masse grasse fait baisser le ratio testostérone/œstrogènes ?", "options": ["Le gras détruit la testostérone", "Le gras contient de l'aromatase qui convertit la testo en estradiol", "Le gras bloque la thyroïde"], "answer": 1, "explain": "Le tissu graisseux est riche en aromatase, qui convertit la testostérone en estradiol : plus de gras = plus de conversion." },
+            { "type": "quiz", "question": "Quel minéral est clé pour éliminer les œstrogènes (via la COMT) ?", "options": ["Le magnésium", "Le sodium", "Le fer"], "answer": 0, "explain": "Le magnésium est le cofacteur de la COMT, l'enzyme qui dégrade les œstrogènes (et la dopamine)." }
+          ]
+        },
+        {
+          "n": "15",
+          "title": "Testostérone basse : l'ordre des causes à vérifier",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Avant de parler de « testo basse » ou de TRT, il faut checker les causes **dans le bon ordre** — celui des plus fréquentes. La plupart des chutes de testostérone sont des conséquences, pas la cause racine." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Testostérone et prise de sang", "ts": "31:38", "platform": "youtube", "url": "https://www.youtube.com/watch?v=G3VpaDrWJGo&t=1898s", "content": "Avant de te déclarer en panne de testo ou en besoin de TRT, regarde tes marqueurs dans l'ordre des causes les plus fréquentes : le sommeil d'abord, puis la ferritine, la vitamine D, la thyroïde, le cortisol. Ensuite seulement le reste." },
+            { "type": "text", "content": "La **vitamine D** revient souvent dans cette liste pour une bonne raison : ce n'est pas vraiment une vitamine." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "64:34", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=3874s", "content": "La vitamine D, ce n'est pas une vitamine : c'est une hormone stéroïdienne, au même titre que la testostérone ou le cortisol. Tout commence dans ta peau : sous l'effet du soleil, une molécule dérivée du cholestérol se transforme en vitamine D3, qui voyage ensuite jusqu'au foie." },
+            { "type": "keypoints", "items": [
+              "Ordre des causes : sommeil → ferritine → vitamine D → thyroïde → cortisol.",
+              "La testo basse est souvent une conséquence, pas la cause racine.",
+              "La vitamine D est une hormone stéroïdienne, pas une simple vitamine."
+            ]},
+            { "type": "quiz", "question": "Quelle est la 1ère cause à vérifier avant de conclure à une testo basse ?", "options": ["Le sommeil", "La créatine", "Les BCAA"], "answer": 0, "explain": "L'ordre des causes les plus fréquentes commence par le sommeil, puis ferritine, vitamine D, thyroïde, cortisol." },
+            { "type": "quiz", "question": "Pourquoi une testo basse est souvent une conséquence ?", "options": ["Car elle vient rarement d'un problème direct des testicules", "Car c'est toujours génétique", "Car c'est irréversible"], "answer": 0, "explain": "Le plus souvent, elle découle d'un sommeil dégradé, d'une carence (fer, vit D) ou d'un stress chronique — on corrige la cause d'abord." }
+          ]
+        },
+        {
+          "n": "16",
+          "title": "L'axe hypothalamus-hypophyse : le chef d'orchestre",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "La plupart des hormones ne partent pas d'un organe isolé mais d'un **axe de commande** dans ton cerveau : l'**hypothalamus** donne les ordres, l'**hypophyse** les exécute. Comprendre ça, c'est comprendre d'où viennent toutes les autres leçons." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "2:43", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Tout commence dans ton cerveau, dans l'hypothalamus, une petite structure qui contrôle des dizaines de fonctions hormonales. L'hypothalamus sécrète la GHRH — Growth Hormone Releasing Hormone — l'hormone qui libère l'hormone de croissance." },
+            { "type": "text", "content": "Mais il y a toujours une **pédale de frein** en face de l'accélérateur : chaque sécrétion est un équilibre entre un signal qui stimule et un signal qui inhibe." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Boissons énergisantes | Biohacking", "ts": "53:23", "platform": "youtube", "url": "https://www.youtube.com/watch?v=M_I3trRn5Vg&t=3203s", "content": "La production de GH est contrôlée par l'hypothalamus et par l'hypophyse, via un équilibre entre deux hormones clés : la GHRH, qui stimule sa sécrétion, et la somatostatine, qui l'inhibe." },
+            { "type": "keypoints", "items": [
+              "Hypothalamus = tour de contrôle ; hypophyse = exécutant.",
+              "GHRH stimule la GH, somatostatine la freine : tout est équilibre.",
+              "Beaucoup d'hormones suivent ce schéma « signal qui active / signal qui inhibe »."
+            ]},
+            { "type": "quiz", "question": "Quel duo régule la sécrétion de GH ?", "options": ["Insuline / glucagon", "GHRH (stimule) / somatostatine (inhibe)", "Leptine / ghréline"], "answer": 1, "explain": "La GHRH pousse la sécrétion de GH, la somatostatine la freine — un équilibre permanent." },
+            { "type": "quiz", "question": "Où débute l'ordre de sécrétion des grandes hormones ?", "options": ["Dans les muscles", "Dans l'hypothalamus", "Dans l'estomac"], "answer": 1, "explain": "L'hypothalamus, dans le cerveau, donne le signal ; l'hypophyse relaie vers les glandes." }
+          ]
+        },
+        {
+          "n": "17",
+          "title": "L'insuline, avant tout une hormone de stockage",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "On présente souvent l'insuline comme « anabolisante », donc bénéfique pour le muscle. C'est vrai, mais c'est un raccourci dangereux : sa nature profonde, c'est le **stockage**." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "18:09", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=1089s", "content": "L'insuline, c'est une hormone anabolisante, bien sûr, mais c'est surtout une hormone de stockage. C'est vraiment comme ça qu'il faut l'appeler : l'hormone de stockage." },
+            { "type": "text", "content": "Elle range le glucose dans les cellules. Selon le **contexte** (muscle vidé par l'entraînement vs canapé), ce stockage ira plutôt vers le muscle… ou vers le gras. D'où l'importance du timing vu au chapitre suivant." },
+            { "type": "keypoints", "items": [
+              "Insuline = hormone de stockage (glucose rangé dans les cellules).",
+              "Anabolisante oui, mais le stockage peut aller au muscle OU au gras.",
+              "Le contexte (entraînement, sensibilité) décide de la destination."
+            ]},
+            { "type": "quiz", "question": "Quelle est la meilleure façon de définir l'insuline ?", "options": ["Une hormone de combustion", "Une hormone de stockage", "Une hormone du stress"], "answer": 1, "explain": "Avant tout, l'insuline stocke : elle fait entrer le glucose dans les cellules." },
+            { "type": "quiz", "question": "Le stockage induit par l'insuline va vers le muscle ou le gras selon…", "options": ["Le hasard", "Le contexte (entraînement, sensibilité à l'insuline)", "L'heure de la lune"], "answer": 1, "explain": "Muscle vidé + bonne sensibilité → stockage musculaire ; sédentarité + résistance → stockage graisseux." }
+          ]
+        },
+        {
+          "n": "18",
+          "title": "Adrénaline & noradrénaline : la lipolyse à l'effort",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Les **catécholamines** (adrénaline, noradrénaline) sont les hormones du « combat ou fuite ». À l'entraînement, elles jouent un rôle clé : elles **libèrent les graisses** pour fournir de l'énergie." },
+            { "type": "quote", "speaker": "AchZod", "source": "Rétatrutide, sucre, jeûne : les 4 vérités", "ts": "42:31", "platform": "youtube", "url": "https://www.youtube.com/watch?v=RSXPcnKBSEw&t=2551s", "content": "L'adrénaline et la noradrénaline sont sécrétées par tes glandes surrénales, comme le cortisol. Quand tu es à l'effort, leur taux monte fortement : elles activent la mobilisation des graisses." },
+            { "type": "text", "content": "C'est le rationnel derrière le cardio à jeun : insuline basse + catécholamines hautes = conditions favorables à la lipolyse. Mais attention, ces hormones partagent la « glande du stress » avec le cortisol." },
+            { "type": "keypoints", "items": [
+              "Adrénaline/noradrénaline = sécrétées par les surrénales, comme le cortisol.",
+              "À l'effort, elles mobilisent les graisses (lipolyse).",
+              "Insuline basse + catécholamines hautes = terrain favorable au déstockage."
+            ]},
+            { "type": "quiz", "question": "Quel est le rôle des catécholamines à l'effort ?", "options": ["Stocker le glucose", "Mobiliser les graisses (lipolyse)", "Fabriquer du muscle directement"], "answer": 1, "explain": "Adrénaline et noradrénaline libèrent les acides gras pour fournir de l'énergie pendant l'effort." },
+            { "type": "quiz", "question": "Quelle glande produit adrénaline, noradrénaline ET cortisol ?", "options": ["La thyroïde", "Les glandes surrénales", "Le pancréas"], "answer": 1, "explain": "Les trois sont sécrétées par les glandes surrénales — d'où le lien étroit stress/lipolyse." }
+          ]
+        },
+        {
+          "n": "19",
+          "title": "SHBG & testostérone libre : celle qui compte vraiment",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Ta testostérone **totale** ne dit pas tout. Une partie est « liée » à une protéine transporteuse (la **SHBG**) et donc inactive. Seule la **testostérone libre** agit sur tes tissus." },
+            { "type": "text", "content": "Deux hommes avec la même testo totale peuvent donc avoir des réalités opposées — souvent à cause de la masse grasse, qui augmente la conversion en œstrogènes et réduit la fraction libre." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Testostérone et prise de sang", "ts": "26:40", "platform": "youtube", "url": "https://www.youtube.com/watch?v=G3VpaDrWJGo&t=1600s", "content": "Son problème, ce n'était pas la quantité de testostérone produite, ni la SHBG : c'était son niveau de masse grasse, qui augmentait sa conversion en œstrogènes et réduisait d'autant sa fraction libre de testostérone." },
+            { "type": "keypoints", "items": [
+              "Testo totale = liée (à la SHBG, inactive) + libre (active).",
+              "Seule la testostérone libre agit réellement sur tes tissus.",
+              "La masse grasse dégrade la fraction libre (via la conversion en œstrogènes)."
+            ]},
+            { "type": "quiz", "question": "Quelle fraction de testostérone agit réellement ?", "options": ["La testostérone liée à la SHBG", "La testostérone libre", "La testostérone totale"], "answer": 1, "explain": "La testo liée à la SHBG est inactive ; c'est la fraction libre qui agit sur les tissus." },
+            { "type": "quiz", "question": "Qu'est-ce qui peut réduire ta testostérone libre ?", "options": ["Trop de masse grasse", "Trop de sommeil", "Trop de magnésium"], "answer": 0, "explain": "L'excès de masse grasse augmente la conversion en œstrogènes et réduit la fraction libre." }
+          ]
+        },
+        {
+          "n": "20",
+          "title": "Vitamine D : l'hormone stéroïdienne du soleil",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "La « vitamine » D n'en est pas une : c'est une **hormone stéroïdienne**, de la même famille que la testostérone et le cortisol. C'est pour ça qu'un déficit plombe directement ton équilibre hormonal." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "64:34", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=3874s", "content": "La vitamine D, ce n'est pas une vitamine : c'est une hormone stéroïdienne, au même titre que la testostérone ou le cortisol. Tout commence dans ta peau : sous l'effet du soleil, une molécule dérivée du cholestérol se transforme en vitamine D3, qui voyage ensuite jusqu'au foie." },
+            { "type": "text", "content": "Elle est fabriquée à partir du **cholestérol** — comme les hormones sexuelles — ce qui explique pourquoi diaboliser tout le cholestérol est une erreur. Après la peau et le foie, le rein l'active en sa forme finale." },
+            { "type": "keypoints", "items": [
+              "Vitamine D = hormone stéroïdienne (famille testo/cortisol).",
+              "Fabriquée à partir du cholestérol, via peau → foie → rein.",
+              "Un déficit fréquent → impact direct sur la testostérone."
+            ]},
+            { "type": "quiz", "question": "La vitamine D est en réalité…", "options": ["Une vitamine hydrosoluble", "Une hormone stéroïdienne", "Un acide aminé"], "answer": 1, "explain": "C'est une hormone stéroïdienne, dérivée du cholestérol, comme la testostérone et le cortisol." },
+            { "type": "quiz", "question": "Où débute sa synthèse ?", "options": ["Dans l'estomac", "Dans la peau, sous l'effet du soleil", "Dans les muscles"], "answer": 1, "explain": "Le soleil transforme un dérivé du cholestérol de la peau en vitamine D3, ensuite activée par le foie puis le rein." }
+          ]
+        },
+        {
+          "n": "21",
+          "title": "Le jeûne nocturne : insuline basse = GH haute",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "On boucle la boucle des chapitres précédents avec un principe pratique : la nuit, tu veux ton **insuline au plus bas** pour laisser monter ta **GH**. Se coucher le ventre plein de glucides va à l'encontre de ça." },
+            { "type": "quote", "speaker": "AchZod", "source": "Comment construire sa diète en 7 étapes", "ts": "148:59", "platform": "youtube", "url": "https://www.youtube.com/watch?v=JE0FG8LZe2I&t=8939s", "content": "Au moment où ton insuline doit être la plus basse possible pour faire monter ton hormone de croissance, si tu te pètes le bide le soir avant de te coucher, tu perturbes justement tout ce qui, au niveau hormonal, était propice à ta perte de masse grasse." },
+            { "type": "keypoints", "items": [
+              "Nuit = fenêtre de GH → insuline doit être basse.",
+              "Gros repas de glucides tardif = insuline haute = GH bridée.",
+              "Placer les glucides plus tôt / autour de l'entraînement (cf. chapitre Insuline)."
+            ]},
+            { "type": "quiz", "question": "Pourquoi éviter un gros repas de glucides juste avant de dormir ?", "options": ["Ça fait maigrir trop vite", "L'insuline reste haute et bride la GH nocturne", "Ça n'a aucun impact"], "answer": 1, "explain": "La nuit, on veut l'insuline basse pour laisser la GH monter ; les glucides tardifs cassent ce mécanisme." },
+            { "type": "quiz", "question": "Quel est l'état hormonal idéal pendant la nuit pour la composition corporelle ?", "options": ["Insuline haute, GH basse", "Insuline basse, GH haute", "Cortisol haut"], "answer": 1, "explain": "Insuline basse + GH haute = conditions propices à la lipolyse nocturne et à la récupération." }
+          ]
+        },
+        {
+          "n": "22",
+          "title": "GH exogène : pourquoi c'est risqué",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "S'injecter de la GH synthétique semble être un raccourci. En réalité, c'est cher, contraignant, et porteur de **risques réels** — dont, paradoxalement, une résistance à l'insuline." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "8:36", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "L'hormone de croissance injectée coûte cher : plusieurs centaines d'euros par mois. Elle nécessite une injection quotidienne, parfois plusieurs fois par jour, pour mimer le rythme pulsatile. Et elle a des risques réels : rétention d'eau, mains qui gonflent, visage bouffi. Elle provoque aussi une résistance à l'insuline, car la GH est diabétogène." },
+            { "type": "text", "content": "C'est pour ça que les **peptides** (sécrétagogues, cf. chapitre Avancé) sont préférés : ils stimulent ta propre GH en respectant son rythme pulsatile naturel, plutôt que de la remplacer brutalement." },
+            { "type": "keypoints", "items": [
+              "GH injectée : coûteuse, quotidienne, risques réels.",
+              "Effet pervers : elle est diabétogène → résistance à l'insuline.",
+              "Les sécrétagogues stimulent ta GH naturelle sans casser le rythme pulsatile."
+            ]},
+            { "type": "quiz", "question": "Quel effet secondaire paradoxal de la GH injectée ?", "options": ["Elle améliore la sensibilité à l'insuline", "Elle provoque une résistance à l'insuline (diabétogène)", "Elle baisse le cortisol"], "answer": 1, "explain": "La GH est diabétogène : en excès exogène, elle favorise la résistance à l'insuline." },
+            { "type": "quiz", "question": "Pourquoi préférer les sécrétagogues à la GH exogène ?", "options": ["Ils sont gratuits", "Ils stimulent ta GH naturelle en respectant son rythme pulsatile", "Ils remplacent la GH d'un coup"], "answer": 1, "explain": "Ils poussent ta propre sécrétion, plus physiologique que de remplacer la GH par injection." }
+          ]
+        },
+        {
+          "n": "23",
+          "title": "GLP-1 en pharmacologie : Ozempic, Mounjaro & la suite",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Après avoir vu le GLP-1 naturel (chapitre Insuline), voici sa version médicament. Les molécules **agonistes du GLP-1** imitent l'hormone avec une durée d'action bien plus longue." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "17:21", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Le sémaglutide, c'est le principe actif d'Ozempic : un agoniste du GLP-1, mais avec une demi-vie beaucoup plus longue, ce qui permet une injection une seule fois par semaine. Le tirzépatide, c'est Mounjaro, et celui-là va encore plus loin. Les études ont montré des pertes de poids moyennes de 20 à 25 % du poids corporel — dont une partie de masse musculaire." },
+            { "type": "text", "content": "La montée en puissance : **sémaglutide** (GLP-1 seul) → **tirzépatide** (double, GLP-1 + GIP) → **rétatrutide** (triple : GLP-1 + GIP + glucagon, avec un effet thermogénique en plus). Le revers : une partie du poids perdu est du **muscle** — d'où l'importance des protéines et de la muscu." },
+            { "type": "keypoints", "items": [
+              "Agonistes GLP-1 = imitent l'hormone, action longue (1 injection/semaine).",
+              "Sémaglutide (Ozempic) → tirzépatide (Mounjaro) → rétatrutide : de plus en plus puissants.",
+              "Attention : une partie de la perte est musculaire (protéines + muscu indispensables)."
+            ]},
+            { "type": "quiz", "question": "Quel est le principe actif d'Ozempic ?", "options": ["Le tirzépatide", "Le sémaglutide", "La metformine"], "answer": 1, "explain": "Ozempic = sémaglutide, un agoniste du GLP-1 à demi-vie longue." },
+            { "type": "quiz", "question": "Quel est le principal revers de ces traitements pour un pratiquant ?", "options": ["Ils font perdre aussi du muscle", "Ils augmentent la faim", "Ils bloquent la GH"], "answer": 0, "explain": "Une partie notable de la perte de poids est musculaire — d'où protéines et entraînement en résistance." }
+          ]
+        },
+        {
+          "n": "24",
+          "title": "Ton bilan sanguin hormonal : quoi demander",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Arrêter de deviner : avant tout protocole ou complément, un **bilan sanguin** te donne l'état réel de ton terrain hormonal. Encore faut-il demander les bons marqueurs." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "53:27", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Avant de commencer quoi que ce soit, tu fais un bilan sanguin : hormones thyroïdiennes, testostérone totale et libre, IGF-1, insuline à jeun, hémoglobine glyquée, profil lipidique complet, CRP, créatinine, bilan hépatique." },
+            { "type": "text", "content": "Combiné à l'ordre des causes (sommeil → ferritine → vitamine D → thyroïde → cortisol), ce bilan te dit **où agir en priorité** au lieu de te supplémenter au hasard." },
+            { "type": "keypoints", "items": [
+              "Panel utile : thyroïde, testo totale + libre, IGF-1, insuline à jeun, HbA1c, lipides, CRP, créatinine, bilan hépatique.",
+              "L'HbA1c révèle ta glycémie moyenne (résistance à l'insuline).",
+              "Le bilan oriente l'action ; il évite de supplémenter à l'aveugle."
+            ]},
+            { "type": "quiz", "question": "Quel marqueur reflète ta glycémie moyenne des dernières semaines ?", "options": ["Le cholestérol", "L'hémoglobine glyquée (HbA1c)", "La créatinine"], "answer": 1, "explain": "L'HbA1c mesure la glycémie moyenne sur ~3 mois — utile pour repérer une résistance à l'insuline." },
+            { "type": "quiz", "question": "Pourquoi demander testostérone totale ET libre ?", "options": ["Pour faire plus d'analyses", "Car seule la libre est active, la totale peut masquer un problème", "Elles sont identiques"], "answer": 1, "explain": "La totale peut sembler normale alors que la fraction libre (active) est basse." }
+          ]
+        },
+        {
+          "n": "25",
+          "title": "La fondation avant tout : sommeil, sucre, stress",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Leçon de clôture, et la plus importante. Aucun peptide, aucun complément, aucun « hack » ne compensera une base négligée. Tout ce qu'on a vu repose sur cette fondation." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "10:15", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Si ta fondation est pourrie, tu peux prendre tous les peptides, ils ne vont rien construire, ils vont juste construire sur des ruines. La fondation, c'est : dormir plus et mieux, réduire le sucre et l'alcool, améliorer ta sensibilité à l'insuline, gérer ton stress, t'entraîner intensément." },
+            { "type": "keypoints", "items": [
+              "Les 5 piliers : sommeil, moins de sucre/alcool, sensibilité à l'insuline, gestion du stress, entraînement intense.",
+              "Les optimisations avancées ne valent RIEN sur une base négligée.",
+              "Commence toujours par la fondation avant de penser 'protocole'."
+            ]},
+            { "type": "quiz", "question": "Que se passe-t-il si on empile des 'hacks' sur une mauvaise base ?", "options": ["On maximise les résultats", "On construit sur des ruines : peu ou pas d'effet", "Ça compense le manque de sommeil"], "answer": 1, "explain": "Sans fondation (sommeil, nutrition, stress), les optimisations avancées ne donnent quasiment rien." },
+            { "type": "quiz", "question": "Lequel N'EST PAS un pilier de la fondation citée ?", "options": ["Le sommeil", "La gestion du stress", "La prise de peptides"], "answer": 2, "explain": "Les peptides sont une optimisation avancée, pas un pilier de la fondation (sommeil, nutrition, insuline, stress, entraînement)." }
+          ]
+        },
+        {
+          "n": "26",
+          "title": "Homme vs femme : le même orchestre, un autre équilibre",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Hommes et femmes ont **les mêmes hormones sexuelles** — testostérone ET œstrogènes. Ce qui change, c'est la **balance** : l'homme est dominé par la testostérone, la femme par les œstrogènes." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "36:55", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Les hommes ont de la testostérone, mais ils ont aussi des œstrogènes. C'est juste une question de balance : chez l'homme, la majorité des hormones sexuelles c'est de la testo, avec un peu d'œstrogènes ; chez la femme, c'est l'inverse." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "38:11", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Chez l'homme, on parle d'un corps plutôt androïde ; chez la femme, un corps gynoïde, avec des œstrogènes, de la progestérone, et aussi des montées de testostérone." },
+            { "type": "keypoints", "items": [
+              "Les deux sexes ont testostérone ET œstrogènes.",
+              "Homme = dominance testo ; femme = dominance œstrogènes.",
+              "Cette balance explique la répartition muscle/graisse (androïde vs gynoïde)."
+            ]},
+            { "type": "quiz", "question": "Vrai ou faux : seuls les hommes ont de la testostérone.", "options": ["Vrai", "Faux, les femmes en produisent aussi", "Seulement en cas de maladie"], "answer": 1, "explain": "Les femmes produisent de la testostérone (en plus faible quantité) ; les hommes produisent aussi des œstrogènes. Tout est balance." },
+            { "type": "quiz", "question": "Qu'est-ce qui distingue hormonalement homme et femme ?", "options": ["Des hormones totalement différentes", "La balance entre testostérone et œstrogènes", "L'absence d'œstrogènes chez l'homme"], "answer": 1, "explain": "Ce sont les mêmes hormones, mais l'équilibre entre elles diffère." }
+          ]
+        },
+        {
+          "n": "27",
+          "title": "Le cycle menstruel en 4 phases",
+          "duration": "5 min",
+          "blocks": [
+            { "type": "text", "content": "Le cycle féminin (~28 jours) n'est pas un état stable : c'est une **succession de 4 phases** où œstrogènes, progestérone et même la sensibilité à l'insuline fluctuent en permanence. Comprendre ça change tout pour la nutrition et l'entraînement." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "22:26", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Pour la phase menstruelle, hormonalement, tu es sur une baisse des œstrogènes et de la progestérone, et une tendance à l'augmentation du cortisol." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "23:24", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "À partir du 1er jour jusqu'à environ le 12-13e, on a une remontée progressive des œstrogènes, et au niveau de l'insuline, on se retrouve avec une meilleure sensibilité." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "24:07", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La phase ovulatoire : là, tu as un pic œstrogénique. Ce pic engendre notamment une hausse de la libido — c'est aussi le moment où la testostérone féminine augmente légèrement." },
+            { "type": "text", "content": "Puis vient la **phase prémenstruelle** : les œstrogènes chutent, la progestérone fluctue — c'est là que les symptômes (fringales, humeur, rétention) apparaissent." },
+            { "type": "keypoints", "items": [
+              "Menstruelle : œstrogènes & progestérone bas, cortisol en hausse.",
+              "Folliculaire : œstrogènes remontent, meilleure sensibilité à l'insuline (fenêtre glucides).",
+              "Ovulatoire : pic d'œstrogènes, libido et testo féminine en hausse.",
+              "Prémenstruelle : chute des œstrogènes → symptômes (fringales, humeur)."
+            ]},
+            { "type": "quiz", "question": "Dans quelle phase la sensibilité à l'insuline est-elle meilleure ?", "options": ["Phase menstruelle", "Phase folliculaire (remontée des œstrogènes)", "Phase prémenstruelle"], "answer": 1, "explain": "En phase folliculaire, la remontée des œstrogènes s'accompagne d'une meilleure sensibilité à l'insuline." },
+            { "type": "quiz", "question": "Que se passe-t-il en phase ovulatoire ?", "options": ["Chute des œstrogènes", "Pic d'œstrogènes et hausse de libido", "Pic de cortisol"], "answer": 1, "explain": "L'ovulation correspond à un pic œstrogénique, avec hausse de libido et légère montée de testostérone." }
+          ]
+        },
+        {
+          "n": "28",
+          "title": "Adapter ta nutrition à ton cycle",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Puisque les hormones fluctuent sur le mois, imposer la même diète tous les jours n'a pas de sens. Ce sont justement ces **fluctuations** qui créent la plupart des symptômes." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "31:26", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Ce sont les fluctuations hormonales qui créent tous les effets secondaires : l'acné, la montée ou la baisse de libido, les problèmes articulaires, les problèmes mentaux, la gestion du stress, les envies de sucre. Il faut adapter la nutrition à tes règles, doucement sur les glucides." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "70:11", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Sur les 4 phases des 28 jours, ça fluctue : à certaines phases, tu gères moins bien le stress, tu gères moins bien l'ennui." },
+            { "type": "keypoints", "items": [
+              "Adapter les glucides à la phase (plus en folliculaire, où la sensibilité insuline est meilleure).",
+              "Anticiper les fringales et l'humeur en phase prémenstruelle.",
+              "Ne jamais couper l'eau : les fluctuations gèrent déjà la rétention."
+            ]},
+            { "type": "quiz", "question": "Pourquoi adapter les glucides selon la phase du cycle ?", "options": ["Par principe esthétique", "Car la sensibilité à l'insuline varie selon la phase", "Ça ne sert à rien"], "answer": 1, "explain": "La sensibilité à l'insuline est meilleure en phase folliculaire : on peut y placer plus de glucides." },
+            { "type": "quiz", "question": "Qu'est-ce qui crée la plupart des symptômes (acné, humeur, fringales) ?", "options": ["Le manque de protéines", "Les fluctuations hormonales du cycle", "Trop d'eau"], "answer": 1, "explain": "Ce sont les variations d'œstrogènes/progestérone au fil du cycle qui déclenchent ces effets." }
+          ]
+        },
+        {
+          "n": "29",
+          "title": "Les œstrogènes ne sont pas l'ennemi",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Beaucoup diabolisent les œstrogènes (surtout les hommes en muscu). Erreur : à un niveau correct, ils sont **indispensables** — libido, articulations, et même la construction musculaire via l'IGF-1. Le problème, c'est l'excès… ou le manque." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "37:28", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "J'ai connu des compétiteurs qui coupaient complètement les œstrogènes et n'avaient plus de libido. Ils ne comprenaient pas. Sans œstrogènes, tu ne peux plus avoir de libido. Il en faut — par contre, il n'en faut pas trop." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "37:13", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Les œstrogènes ont certaines actions, notamment sur le système articulaire, et ils sont indispensables pour créer l'IGF-1." },
+            { "type": "keypoints", "items": [
+              "Œstrogènes trop bas = libido effondrée, articulations fragiles, IGF-1 en berne.",
+              "Ils sont nécessaires à la construction musculaire (via l'IGF-1), y compris chez l'homme.",
+              "L'objectif n'est pas 'zéro œstrogène' mais un ratio équilibré avec la testostérone."
+            ]},
+            { "type": "quiz", "question": "Que provoque un taux d'œstrogènes trop bas chez l'homme ?", "options": ["Plus de muscle", "Perte de libido et articulations fragiles", "Rien du tout"], "answer": 1, "explain": "Couper trop les œstrogènes détruit la libido et fragilise les articulations — il en faut un minimum." },
+            { "type": "quiz", "question": "Quel est le bon objectif concernant les œstrogènes ?", "options": ["Les supprimer totalement", "Un ratio équilibré avec la testostérone", "Les maximiser"], "answer": 1, "explain": "Ni trop, ni trop peu : c'est l'équilibre testostérone/œstrogènes qui compte." }
+          ]
+        },
+        {
+          "n": "30",
+          "title": "La pause diète : réveiller leptine & thyroïde",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Quand une sèche stagne, l'instinct est de baisser encore les calories. Souvent, c'est l'inverse qu'il faut faire : une **pause diète** (diet break) pour sortir ton corps du mode famine." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ Métabolisme : tout ce que tu crois savoir", "ts": "15:43", "platform": "youtube", "url": "https://www.youtube.com/watch?v=_6JNRHWc0jw&t=943s", "content": "On remonte les calories, on revient à la maintenance une à deux semaines, le temps que la leptine remonte, que la thyroïde se réveille, que le corps comprenne qu'il n'est plus en famine. Et seulement après, on relance la sèche." },
+            { "type": "text", "content": "C'est la suite logique de la leçon sur la leptine : puisque la restriction fait chuter leptine et T3, on les **restaure temporairement** pour repartir avec un métabolisme qui tourne." },
+            { "type": "keypoints", "items": [
+              "Sèche qui stagne → une pause diète peut débloquer plus qu'une nouvelle baisse.",
+              "Retour à maintenance 1-2 semaines : leptine remonte, thyroïde se réveille.",
+              "On relance la sèche seulement après cette 'réinitialisation'."
+            ]},
+            { "type": "quiz", "question": "À quoi sert une pause diète en sèche ?", "options": ["À prendre du gras exprès", "À faire remonter leptine et thyroïde (sortir du mode famine)", "À arrêter définitivement la sèche"], "answer": 1, "explain": "Revenir à maintenance 1-2 semaines relance la leptine et la T3, ce qui réveille le métabolisme." },
+            { "type": "quiz", "question": "Quand une sèche stagne malgré peu de calories, une bonne option est…", "options": ["Baisser encore plus les calories", "Faire une pause diète à maintenance", "Supprimer les protéines"], "answer": 1, "explain": "Baisser sans cesse aggrave l'adaptation ; la pause diète restaure les hormones du métabolisme." }
+          ]
+        },
+        {
+          "n": "31",
+          "title": "Jeûne intermittent : maintenir n'est pas construire",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le jeûne intermittent a des atouts, mais il faut être lucide sur ce qu'il fait vraiment côté muscle : à jeun, ta GH élevée te fait surtout **conserver** ta masse, pas en construire." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "20:48", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=1248s", "content": "Quelqu'un en fasting qui va juste manger un steak ne construit rien : il maintient sa masse musculaire, parce que l'hormone de croissance est anti-catabolique. Mais l'anabolisme n'est que très peu déclenché, sauf s'il a un taux de testostérone très élevé." },
+            { "type": "text", "content": "En contrepartie, le jeûne (et la cétose) a un vrai bénéfice **cognitif** : les cétones sont un carburant propre pour le cerveau." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "44:23", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Le jeûne intermittent et les régimes cétogènes améliorent très souvent la clarté mentale : plus de cétones, meilleur carburant, mitochondries cérébrales plus performantes, tu es en forme." },
+            { "type": "keypoints", "items": [
+              "À jeun, la GH (anti-catabolique) protège le muscle mais ne le construit pas.",
+              "L'anabolisme réel demande un stimulus (protéines + insuline / entraînement).",
+              "Bénéfice du jeûne : clarté mentale via les cétones (carburant cérébral)."
+            ]},
+            { "type": "quiz", "question": "Que fait surtout la GH élevée pendant le jeûne ?", "options": ["Elle construit du muscle", "Elle protège la masse musculaire (anti-catabolisme)", "Elle stocke du gras"], "answer": 1, "explain": "La GH est anti-catabolique : à jeun, elle préserve le muscle mais ne déclenche pas franchement l'anabolisme." },
+            { "type": "quiz", "question": "Quel bénéfice cognitif associé au jeûne / à la cétose ?", "options": ["Plus de brouillard mental", "Plus de clarté mentale via les cétones", "Aucun effet sur le cerveau"], "answer": 1, "explain": "Les cétones sont un carburant efficace pour le cerveau, d'où la clarté mentale souvent rapportée." }
+          ]
+        },
+        {
+          "n": "32",
+          "title": "Le cholestérol, matière première de tes hormones",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Diaboliser tout le cholestérol est une erreur : c'est la **brique de base** de tes hormones stéroïdiennes (testostérone, cortisol, œstrogènes) et de la vitamine D. En manquer sabote directement ta production hormonale." },
+            { "type": "quote", "speaker": "AchZod", "source": "Œstrogènes, Testostérone, Trenbolone et métabolisme", "ts": "16:42", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Z5gjTEbD90Q&t=1002s", "content": "Si ton corps manque de cholestérol pour fabriquer des hormones, les membranes cellulaires perdent leur efficacité. Résultat : diminution puis chute de la testostérone, perte de performance, difficulté à prendre du muscle, baisse de libido." },
+            { "type": "text", "content": "C'est le même principe que pour la vitamine D (vue au chapitre Testostérone) : fabriquée à partir du cholestérol. D'où l'importance des **bonnes graisses** dans une diète, même en sèche." },
+            { "type": "keypoints", "items": [
+              "Le cholestérol est le précurseur des hormones stéroïdiennes + vitamine D.",
+              "Diète trop pauvre en graisses → testostérone et libido en chute.",
+              "Garder des lipides de qualité, même en période de sèche."
+            ]},
+            { "type": "quiz", "question": "Pourquoi ne pas trop diaboliser le cholestérol ?", "options": ["Il ne sert à rien", "C'est la matière première des hormones stéroïdiennes", "Il remplace les protéines"], "answer": 1, "explain": "Testostérone, cortisol, œstrogènes et vitamine D sont fabriqués à partir du cholestérol." },
+            { "type": "quiz", "question": "Quel risque d'une diète trop pauvre en graisses ?", "options": ["Chute de la testostérone et de la libido", "Trop de muscle", "Meilleure production hormonale"], "answer": 0, "explain": "Sans assez de cholestérol/lipides, la production hormonale baisse : testo et libido chutent." }
+          ]
+        },
+        {
+          "n": "33",
+          "title": "Cortisol chronique : quand la motivation s'effondre",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Le cortisol ponctuel est utile (il te met en action). Le problème, c'est le cortisol **chronique** : au-delà de saboter la GH (vu au chapitre Stress), il attaque directement ta **motivation** en désensibilisant ton système dopaminergique." },
+            { "type": "quote", "speaker": "AchZod", "source": "Rétatrutide, sucre, jeûne : les 4 vérités", "ts": "101:35", "platform": "youtube", "url": "https://www.youtube.com/watch?v=RSXPcnKBSEw&t=6095s", "content": "Si le cortisol est chroniquement élevé, il agit directement sur le noyau et fait baisser le nombre de récepteurs à la dopamine. Résultat : tes neurones deviennent moins sensibles à la dopamine." },
+            { "type": "text", "content": "Moins de récepteurs à la dopamine = moins de plaisir, moins d'élan, plus d'envies compensatoires (sucre). C'est le mécanisme hormonal derrière le burnout et la perte d'entrain à l'entraînement." },
+            { "type": "keypoints", "items": [
+              "Cortisol chronique → baisse des récepteurs à la dopamine.",
+              "Conséquence : motivation en berne, anhédonie, envies de sucre compensatoires.",
+              "Gérer le stress protège autant ta GH que ton envie d'avancer."
+            ]},
+            { "type": "quiz", "question": "Quel effet du cortisol chronique sur la dopamine ?", "options": ["Il augmente les récepteurs", "Il réduit le nombre de récepteurs (neurones moins sensibles)", "Aucun effet"], "answer": 1, "explain": "Le cortisol chronique fait baisser le nombre de récepteurs à la dopamine : les neurones y deviennent moins sensibles." },
+            { "type": "quiz", "question": "Quelle conséquence concrète d'un système dopaminergique désensibilisé ?", "options": ["Plus de motivation", "Baisse de motivation et envies compensatoires (sucre)", "Meilleur sommeil"], "answer": 1, "explain": "Moins de sensibilité à la dopamine = moins de plaisir/élan et davantage de compensations comme le sucre." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "category": "nutrition",
+      "title": "Nutrition & diète : construire ton alimentation",
+      "subtitle": "Des fondamentaux aux objectifs (sèche, masse, écarts)",
+      "chapters": [
+        { "id": "n1", "icon": "🎯", "title": "Les fondamentaux", "subtitle": "Ce qui compte vraiment", "lessons": ["N01", "N14", "N20", "N08"] },
+        { "id": "n2", "icon": "🥩", "title": "Les macronutriments", "subtitle": "Protéines, glucides, lipides", "lessons": ["N02", "N03", "N04"] },
+        { "id": "n3", "icon": "🥦", "title": "Satiété & qualité des aliments", "subtitle": "Manger à sa faim, mieux", "lessons": ["N05", "N06"] },
+        { "id": "n4", "icon": "🔥", "title": "La sèche", "subtitle": "Perdre du gras, garder le muscle", "lessons": ["N09", "N10"] },
+        { "id": "n5", "icon": "💪", "title": "La prise de masse", "subtitle": "Construire sans empiler du gras", "lessons": ["N11", "N12"] },
+        { "id": "n6", "icon": "♻️", "title": "Recomposition", "subtitle": "Perdre du gras ET prendre du muscle", "lessons": ["N13"] },
+        { "id": "n7", "icon": "🍕", "title": "Gérer les écarts", "subtitle": "Cheat meal & flexibilité", "lessons": ["N07", "N15"] },
+        { "id": "n8", "icon": "💊", "title": "Compléments & hygiène alimentaire", "subtitle": "Suppléments, fibres, hydratation", "lessons": ["N16", "N17", "N18", "N19"] }
+      ],
+      "lessons": [
+        {
+          "n": "N01",
+          "title": "La balance énergétique : le total prime sur le détail",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "C'est LE fondement de toute diète : tu perds du gras en **déficit** (moins de calories que ta dépense), tu prends du poids en **surplus**, tu maintiens à l'**équilibre**. Avant de t'occuper du timing ou des détails, c'est le **total sur la journée** qui décide." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Muscu intelligente", "ts": "33:35", "platform": "youtube", "url": "https://www.youtube.com/watch?v=4QmyZOG71mo&t=2015s", "content": "Ce qui compte, c'est le total sur la journée : ton total de protéines, ton total de calories. Sur chaque effort il y a un léger catabolisme, mais si tu manges assez sur la journée, l'essentiel est là." },
+            { "type": "text", "content": "Traduction pratique : inutile de stresser sur « ce repas précis » si ton **bilan quotidien** (puis hebdomadaire) est bon. On règle d'abord les calories et les protéines, le reste est du fignolage." },
+            { "type": "keypoints", "items": [
+              "Déficit = perte, surplus = prise, équilibre = maintien.",
+              "C'est le TOTAL journalier (calories + protéines) qui prime.",
+              "Le timing et les détails passent APRÈS les totaux."
+            ]},
+            { "type": "quiz", "question": "Qu'est-ce qui détermine avant tout perte ou prise de poids ?", "options": ["L'heure des repas", "Le total calorique sur la journée (déficit/surplus)", "Le nombre de repas"], "answer": 1, "explain": "La balance énergétique (calories in vs out) est le facteur premier ; le reste est secondaire." },
+            { "type": "quiz", "question": "Par quoi commencer quand on structure sa diète ?", "options": ["Le timing exact des repas", "Les totaux (calories + protéines)", "Les compléments"], "answer": 1, "explain": "On fixe d'abord calories et protéines totales ; le timing et les détails sont du fignolage." }
+          ]
+        },
+        {
+          "n": "N02",
+          "title": "Les protéines : combien et pourquoi",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Les protéines sont la macro prioritaire : elles fournissent les briques du muscle et sont les plus **rassasiantes**. L'important, encore une fois, c'est d'atteindre ton **total sur la journée**." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ sur les protéines et compléments", "ts": "57:31", "platform": "youtube", "url": "https://www.youtube.com/watch?v=GTif8kNPITk&t=3451s", "content": "On conseille entre 2 et 3 g par kilo de poids de corps, ça dépend de l'intensité de l'entraînement. Quelqu'un qui n'a pas atteint son total de protéines sur la journée peut la terminer par de la caséine pour arriver à son apport conseillé." },
+            { "type": "text", "content": "La **caséine** (protéine lente) est pratique en fin de journée pour compléter le total. Mais un shaker ne remplace pas de vrais aliments : c'est un complément, pas une base." },
+            { "type": "keypoints", "items": [
+              "Repère cité : ~2 à 3 g de protéines / kg de poids de corps selon l'intensité.",
+              "Ce qui compte = le total journalier atteint, peu importe la répartition exacte.",
+              "Caséine = utile pour compléter en fin de journée (digestion lente)."
+            ]},
+            { "type": "quiz", "question": "Quel repère de protéines est cité ?", "options": ["0,5 g/kg", "2 à 3 g/kg selon l'intensité", "10 g/kg"], "answer": 1, "explain": "AchZod cite ~2 à 3 g par kilo de poids de corps, à moduler selon l'intensité de l'entraînement." },
+            { "type": "quiz", "question": "À quoi sert la caséine en fin de journée ?", "options": ["À remplacer tous les repas", "À compléter le total de protéines (digestion lente)", "À couper la faim uniquement"], "answer": 1, "explain": "Protéine lente, elle aide à atteindre le total quotidien — en complément, pas en base." }
+          ]
+        },
+        {
+          "n": "N03",
+          "title": "Les glucides : index glycémique vs quantité",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "On diabolise l'index glycémique (IG) des aliments. En réalité, ce qui pèse le plus, c'est la **quantité** de glucides et la **charge glycémique** (IG × quantité), pas l'IG d'un aliment isolé." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Diète cétogène, insuline", "ts": "13:09", "platform": "youtube", "url": "https://www.youtube.com/watch?v=UiXapZCrCOw&t=789s", "content": "Plus le pic d'insuline est violent, plus on risque de stocker du gras, c'est vrai. Mais avant même de regarder l'index glycémique, ce qui compte surtout, c'est la quantité." },
+            { "type": "quote", "speaker": "AchZod & Nassim Sahili", "source": "Podcast avec Jimmy Mohamed & Nassim Sahili", "ts": "11:39", "platform": "youtube", "url": "https://www.youtube.com/watch?v=vcbo34k4PeQ&t=699s", "content": "Il faut vraiment prendre en compte la charge glycémique, la quantité totale de glucides ingérée — et pas seulement l'index glycémique. La source compte aussi : les fibres contenues dans l'aliment abaissent la charge glycémique totale." },
+            { "type": "text", "content": "Concrètement : un aliment à IG élevé mangé en petite quantité, avec des fibres/protéines/lipides, a un impact modéré. On raisonne **repas complet**, pas aliment isolé." },
+            { "type": "keypoints", "items": [
+              "Charge glycémique = IG × quantité → c'est elle qui compte, pas l'IG seul.",
+              "Les fibres (et manger l'aliment avec protéines/lipides) abaissent la charge.",
+              "Raisonner en repas complet, jamais en aliment isolé."
+            ]},
+            { "type": "quiz", "question": "Qu'est-ce qui compte le plus pour l'impact des glucides ?", "options": ["L'index glycémique d'un aliment isolé", "La charge glycémique (quantité × IG)", "La couleur de l'aliment"], "answer": 1, "explain": "La charge glycémique (quantité totale × IG), et le contexte du repas, priment sur l'IG isolé." },
+            { "type": "quiz", "question": "Qu'est-ce qui abaisse la charge glycémique d'un repas ?", "options": ["Les fibres, protéines et lipides associés", "Manger plus vite", "Sauter le repas"], "answer": 0, "explain": "Fibres et co-ingestion de protéines/lipides ralentissent l'absorption et abaissent la charge glycémique." }
+          ]
+        },
+        {
+          "n": "N04",
+          "title": "Les lipides : ne les supprime jamais",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Erreur classique en sèche : couper les lipides « pour maigrir ». Or les lipides sont **indispensables** — notamment pour fabriquer tes hormones (rappelle-toi le cholestérol, précurseur hormonal, dans le thème Hormones)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "69:15", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Les lipides sont indispensables, déjà sur un plan santé, et pour toute la production des hormones sexuelles. Même une femme en surpoids qui ne consomme pas de lipides — parce qu'un coach a dit qu'il fallait sécher — se retrouve avec un cycle complètement déréglé." },
+            { "type": "keypoints", "items": [
+              "Les lipides servent à fabriquer les hormones (via le cholestérol).",
+              "Les couper trop = chute hormonale (testo, cycle menstruel dérèglé).",
+              "Garder un minimum de bonnes graisses, même en sèche."
+            ]},
+            { "type": "quiz", "question": "Pourquoi ne jamais supprimer totalement les lipides ?", "options": ["Ils n'ont aucune importance", "Ils sont nécessaires à la production hormonale", "Ils remplacent les protéines"], "answer": 1, "explain": "Les lipides (via le cholestérol) sont la matière première des hormones : les couper dérègle le système hormonal." },
+            { "type": "quiz", "question": "Que risque une diète 'zéro lipides' prolongée ?", "options": ["Un dérèglement hormonal", "Plus de muscle", "Rien"], "answer": 0, "explain": "Chute de testostérone, cycle menstruel perturbé… la production hormonale a besoin de lipides." }
+          ]
+        },
+        {
+          "n": "N05",
+          "title": "La satiété, c'est du volume avant tout",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Ton estomac ne « compte » pas les calories : il perçoit un **volume**. C'est pour ça qu'à calories égales, certains aliments te calent et d'autres pas du tout — un levier énorme, surtout en sèche." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "80:45", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "L'estomac, il n'a pas un compteur de calories, il a un compteur de quantité de volume. Donc je cherche à remplir ce volume pour avoir cette notion de : j'ai eu faim, j'ai mangé, j'ai ma satiété, je suis rassasié." },
+            { "type": "quote", "speaker": "AchZod (BROCAST)", "source": "BROCAST : FAQ nutrition", "ts": "9:02", "platform": "youtube", "url": "https://www.youtube.com/watch?v=IMR4fpzla5E&t=542s", "content": "Le riz, par exemple, te donne une grosse quantité de glucides sur moins de volume alimentaire — et la digestion n'est pas la même. Pour un objectif de satiété, ce volume change tout." },
+            { "type": "text", "content": "En pratique : privilégie les aliments **volumineux et peu denses** en calories (légumes, pommes de terre, protéines maigres) quand tu veux te caler en déficit ; les aliments denses (riz, huiles) quand tu peines à manger assez en prise de masse." },
+            { "type": "keypoints", "items": [
+              "L'estomac mesure le volume, pas les calories.",
+              "En sèche : aliments volumineux et peu caloriques pour se caler.",
+              "En prise de masse : aliments denses pour atteindre le total sans exploser le volume."
+            ]},
+            { "type": "quiz", "question": "Que 'mesure' réellement ton estomac ?", "options": ["Les calories", "Le volume de nourriture", "Les grammes de protéines"], "answer": 1, "explain": "La satiété dépend surtout du volume ingéré, pas du nombre de calories." },
+            { "type": "quiz", "question": "Quel type d'aliment privilégier pour se caler en sèche ?", "options": ["Aliments denses et huileux", "Aliments volumineux et peu caloriques", "Uniquement des liquides"], "answer": 1, "explain": "Volumineux + peu denses (légumes, patates, protéines maigres) = satiété à moindre coût calorique." }
+          ]
+        },
+        {
+          "n": "N06",
+          "title": "Transformé vs maison : mêmes calories, pas même effet",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "« Une calorie est une calorie » est vrai pour la balance énergétique… mais incomplet. À macros et calories identiques, un aliment **ultra-transformé** et un plat maison ne produisent pas la même satiété ni la même assimilation." },
+            { "type": "quote", "speaker": "AchZod", "source": "Métabolisme lent ou cassé ?", "ts": "102:20", "platform": "youtube", "url": "https://www.youtube.com/watch?v=k68jMjPG0Ec&t=6140s", "content": "Après un Big Mac, tu es moins rassasié qu'après un burger maison. Tu prends au macro près et au calorie près la même chose — mais les composés rattachés aux aliments naturels font que ton microbiote ne capte pas ces calories de la même façon." },
+            { "type": "keypoints", "items": [
+              "À calories/macros égales, transformé ≠ maison (satiété, assimilation).",
+              "Les aliments bruts nourrissent mieux le microbiote et rassasient davantage.",
+              "La qualité compte, en plus de la quantité — pas à la place."
+            ]},
+            { "type": "quiz", "question": "À calories et macros égales, quel repas rassasie le plus ?", "options": ["Le Big Mac", "Le burger maison (aliments bruts)", "Aucune différence"], "answer": 1, "explain": "Les aliments bruts rassasient davantage et sont assimilés différemment, malgré des macros identiques." },
+            { "type": "quiz", "question": "Que dit cette leçon sur 'une calorie est une calorie' ?", "options": ["C'est totalement faux", "C'est vrai pour la balance, mais la qualité influence satiété/assimilation", "Seule la qualité compte"], "answer": 1, "explain": "La quantité gère le poids ; la qualité gère la satiété, l'assimilation et la santé — les deux comptent." }
+          ]
+        },
+        {
+          "n": "N07",
+          "title": "Cheat meal : comment le gérer intelligemment",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Un cheat meal n'est pas un dérapage sans règle. Bien géré, c'est un repas plaisir **anticipé et compensé** dans ton bilan de la journée (ou de la semaine)." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : gérer un cheatmeal", "ts": "26:58", "platform": "youtube", "url": "https://www.youtube.com/watch?v=aI2QmCoDo2o&t=1618s", "content": "Avant un cheat, tu vas anticiper en compensant : le jour où tu prévois ta pizza le soir, tu vas limiter les glucides et les lipides dans la journée, parce que tu sais que le soir tu vas compenser." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ - The Game Changers", "ts": "2:19", "platform": "youtube", "url": "https://www.youtube.com/watch?v=3lBGlStcPuQ&t=139s", "content": "Un cheat, quand tu es en diète, ça reste un repas qui est censé apporter un certain nombre de calories, ou plus précisément un certain nombre de grammes de glucides et de lipides." },
+            { "type": "keypoints", "items": [
+              "Cheat meal = anticipé et intégré, pas un dérapage.",
+              "Compenser le reste de la journée (moins de glucides/lipides avant).",
+              "Raisonner en bilan journalier/hebdo : un repas ne casse pas une semaine cadrée."
+            ]},
+            { "type": "quiz", "question": "Comment intégrer un cheat meal intelligemment ?", "options": ["Ne rien changer d'autre", "Anticiper et compenser sur le reste de la journée", "Jeûner 24h après"], "answer": 1, "explain": "On allège glucides/lipides le reste de la journée pour absorber le cheat dans le bilan." },
+            { "type": "quiz", "question": "Sur quelle échelle juger l'impact d'un cheat meal ?", "options": ["Le repas isolé", "Le bilan journalier / hebdomadaire", "La minute qui suit"], "answer": 1, "explain": "Un repas ne définit pas ta progression : c'est le bilan global (jour/semaine) qui compte." }
+          ]
+        },
+        {
+          "n": "N08",
+          "title": "Le timing : les glucides autour de l'entraînement",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Une fois les totaux réglés (leçon 1), le principal levier de timing est simple : concentrer une bonne partie de tes **glucides autour de l'entraînement**, là où ta sensibilité à l'insuline est la meilleure (cf. thème Hormones)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Hormones, insuline, cycle féminin", "ts": "27:14", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Au niveau de la sensibilité à l'insuline, ce n'est pas la même selon le moment. De ce fait, on va prioriser les glucides autour de l'entraînement. Ça, c'est une priorité qui ne bouge pas." },
+            { "type": "keypoints", "items": [
+              "Priorité de timing n°1 : les glucides autour de la séance.",
+              "C'est là que la sensibilité à l'insuline est la meilleure.",
+              "Le timing vient APRÈS les totaux, pas avant."
+            ]},
+            { "type": "quiz", "question": "Où placer en priorité tes glucides ?", "options": ["Le matin uniquement", "Autour de l'entraînement", "Avant de dormir"], "answer": 1, "explain": "La sensibilité à l'insuline est meilleure autour de l'effort : c'est là qu'on concentre les glucides." },
+            { "type": "quiz", "question": "Le timing des glucides passe…", "options": ["Avant les totaux caloriques", "Après avoir réglé les totaux", "À la place des totaux"], "answer": 1, "explain": "D'abord les totaux (calories/protéines), ensuite le timing pour optimiser." }
+          ]
+        },
+        {
+          "n": "N14",
+          "title": "La hiérarchie des priorités : ne saute pas d'étape",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Une diète, c'est un empilement de priorités. Régler un détail (timing, complément) alors que la base est bancale ne sert à rien. L'ordre : **calories → protéines → qualité des aliments → timing → détails**." },
+            { "type": "quote", "speaker": "AchZod", "source": "Comment construire sa diète en 7 étapes", "ts": "96:23", "platform": "youtube", "url": "https://www.youtube.com/watch?v=JE0FG8LZe2I&t=5783s", "content": "Répartition des macros parfaite, calories parfaites… mais avec des ingrédients pourris, tu ne vas nulle part. Le timing pareil : si tu mets tous tes glucides le matin, que tu jeûnes, puis que tu t'entraînes le soir sans adapter à ta sensibilité à l'insuline ou à ta thyroïde, tu ne vas nulle part." },
+            { "type": "keypoints", "items": [
+              "Ordre des priorités : calories → protéines → qualité → timing → détails.",
+              "Des macros parfaites avec des aliments pourris = résultats nuls.",
+              "Optimiser un détail avant la base, c'est perdre son temps."
+            ]},
+            { "type": "quiz", "question": "Quelle est la bonne hiérarchie des priorités ?", "options": ["Timing → compléments → calories", "Calories → protéines → qualité → timing → détails", "Compléments d'abord"], "answer": 1, "explain": "On règle d'abord les totaux, puis la qualité, puis le timing ; les détails en dernier." },
+            { "type": "quiz", "question": "Des macros parfaites avec des aliments ultra-transformés donnent…", "options": ["Un résultat optimal", "Des résultats médiocres (la qualité compte aussi)", "Rien à voir avec les résultats"], "answer": 1, "explain": "La quantité gère le poids, mais la qualité influence satiété, assimilation et santé." }
+          ]
+        },
+        {
+          "n": "N09",
+          "title": "Perdre du poids n'est pas perdre du gras",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Le piège de la sèche, c'est de ne regarder que la balance. Un déficit fait baisser le **poids** — mais ce poids peut être du muscle, de l'eau ou du gras. L'objectif réel, c'est la **composition corporelle**." },
+            { "type": "quote", "speaker": "AchZod", "source": "Podcast : les erreurs qui freinent tes résultats", "ts": "109:36", "platform": "youtube", "url": "https://www.youtube.com/watch?v=r5MsZFJRqgA&t=6576s", "content": "Un déficit calorique, ça te fait perdre du poids. Mais tu ne sais pas quel poids tu perds. Ce qui compte, ce n'est pas juste le chiffre sur la balance, c'est la composition corporelle." },
+            { "type": "text", "content": "Concrètement : protéines hautes + entraînement en résistance pendant le déficit = tu orientes la perte vers le **gras** et tu préserves le muscle. Sans ça, tu maigris… en 'skinny fat'." },
+            { "type": "keypoints", "items": [
+              "La balance mesure le poids, pas la nature de ce que tu perds.",
+              "Objectif = composition corporelle (perdre du gras, garder le muscle).",
+              "Protéines hautes + muscu en déficit = préserver le muscle."
+            ]},
+            { "type": "quiz", "question": "Que garantit vraiment un déficit calorique ?", "options": ["Perdre du gras spécifiquement", "Perdre du poids (pas forcément du gras)", "Prendre du muscle"], "answer": 1, "explain": "Le déficit fait perdre du poids ; c'est protéines + muscu qui orientent la perte vers le gras." },
+            { "type": "quiz", "question": "Comment préserver le muscle en sèche ?", "options": ["Baisser les protéines", "Protéines hautes + entraînement en résistance", "Arrêter la muscu"], "answer": 1, "explain": "Protéines élevées et stimulus musculaire signalent au corps de garder le muscle et de puiser dans le gras." }
+          ]
+        },
+        {
+          "n": "N10",
+          "title": "Le cardio en sèche : à jeun & sans impact",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Le cardio est un outil pour creuser la dépense, pas une obligation. Deux réglages utiles : le faire **à jeun de glucides** (pour favoriser la lipolyse) et choisir un format **adapté à ton poids**." },
+            { "type": "quote", "speaker": "AchZod & Pamz", "source": "Peptides, hormones — avec Pamz_Therapy", "ts": "67:41", "platform": "youtube", "url": "https://www.youtube.com/watch?v=y8pUXIjG_7I&t=4061s", "content": "Tu peux faire du cardio à jeun de glucides pour activer la lipolyse, par exemple en première partie de séance. Il peut y avoir ensuite un repas le midi avec des fibres et des protéines, pour ne pas te retrouver en déficit protéique." },
+            { "type": "quote", "speaker": "AchZod", "source": "Métabolisme lent ou cassé ?", "ts": "144:18", "platform": "youtube", "url": "https://www.youtube.com/watch?v=k68jMjPG0Ec&t=8658s", "content": "Si tu es en surpoids, tu es trop lourd pour ton corps et tu abîmes tes articulations. Privilégie un cardio stationnaire, sans impact — pas de course ni de sauts." },
+            { "type": "keypoints", "items": [
+              "Cardio à jeun de glucides = terrain favorable à la lipolyse.",
+              "Ne pas se retrouver en déficit protéique : garder les protéines hautes.",
+              "En surpoids : cardio stationnaire sans impact (vélo, marche) pour les articulations."
+            ]},
+            { "type": "quiz", "question": "Pourquoi faire le cardio à jeun de glucides ?", "options": ["Pour brûler du muscle", "Pour favoriser la lipolyse (mobilisation des graisses)", "Ça ne change rien"], "answer": 1, "explain": "Avec une insuline basse, le cardio à jeun favorise la mobilisation des graisses." },
+            { "type": "quiz", "question": "Quel cardio privilégier en surpoids ?", "options": ["Course et sauts", "Cardio stationnaire sans impact", "Aucun cardio"], "answer": 1, "explain": "Pour protéger les articulations, on privilégie le sans-impact (vélo, marche, rameur) quand on est lourd." }
+          ]
+        },
+        {
+          "n": "N11",
+          "title": "La prise de masse propre : garder les abdos",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "« Prise de masse » ne veut pas dire « manger tout et n'importe quoi ». Le but d'une prise de masse **propre**, c'est d'ajouter du muscle sans empiler du gras — donc en gardant ta définition." },
+            { "type": "quote", "speaker": "AchZod", "source": "Diète sèche 8 semaines — phase 1", "ts": "1:14", "platform": "youtube", "url": "https://www.youtube.com/watch?v=OG9aTapSde4&t=74s", "content": "La prise de masse propre, ça veut dire que tu gardes tes abdos : tu ajoutes juste un peu de volume. Parce que quand tu es en vraie sèche de compétition, tu finis un peu plat." },
+            { "type": "text", "content": "En pratique : un **surplus léger** (pas énorme), des protéines hautes, et on surveille le miroir/tour de taille. Mieux vaut prendre lentement du muscle 'sec' que devoir tout re-sécher ensuite." },
+            { "type": "keypoints", "items": [
+              "Prise de masse propre = ajouter du muscle en gardant les abdos.",
+              "Surplus léger, protéines hautes, on surveille le tour de taille.",
+              "Prendre trop vite = plus de gras à re-sécher ensuite."
+            ]},
+            { "type": "quiz", "question": "Que vise une prise de masse 'propre' ?", "options": ["Prendre le plus de poids possible", "Ajouter du muscle en limitant le gras", "Perdre du gras"], "answer": 1, "explain": "On cherche à gagner du muscle sans empiler du gras : garder sa définition." },
+            { "type": "quiz", "question": "Quel niveau de surplus pour une prise propre ?", "options": ["Un surplus énorme", "Un surplus léger", "Un déficit"], "answer": 1, "explain": "Un surplus léger suffit à construire ; l'excès finit surtout en gras." }
+          ]
+        },
+        {
+          "n": "N12",
+          "title": "Le reverse diet : réapprendre à manger plus",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Après une sèche, ton métabolisme s'est adapté à la baisse. Remonter les calories d'un coup = rebond de gras. La solution : le **reverse diet**, remonter progressivement pour prendre du muscle en restant sec." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ Métabolisme : tout ce que tu crois savoir", "ts": "46:34", "platform": "youtube", "url": "https://www.youtube.com/watch?v=_6JNRHWc0jw&t=2794s", "content": "Tu remontes les calories tout doucement, palier par palier, en laissant ta dépense remonter en face. Ta thyroïde se réveille, et tu réapprends à ton corps à manger plus tout en restant sec. C'est de la rééducation, pas une diète." },
+            { "type": "text", "content": "C'est le pont naturel entre une sèche et une prise de masse : on restaure d'abord la 'machine' (leptine, thyroïde — cf. la pause diète dans le thème Hormones), puis on construit." },
+            { "type": "keypoints", "items": [
+              "Après une sèche, le métabolisme est adapté à la baisse.",
+              "Reverse diet : remonter les calories palier par palier.",
+              "On réveille la thyroïde et on remange plus en restant sec."
+            ]},
+            { "type": "quiz", "question": "Qu'est-ce que le reverse diet ?", "options": ["Baisser encore les calories", "Remonter les calories progressivement après une sèche", "Manger tout d'un coup"], "answer": 1, "explain": "On remonte les calories palier par palier pour laisser la dépense (et la thyroïde) suivre, sans rebond de gras." },
+            { "type": "quiz", "question": "Pourquoi ne pas remonter les calories d'un coup après une sèche ?", "options": ["Ça n'a aucun effet", "Le métabolisme adapté provoque un rebond de gras", "Ça fait perdre du muscle"], "answer": 1, "explain": "Le métabolisme s'est adapté à la baisse : une remontée brutale se stocke en gras." }
+          ]
+        },
+        {
+          "n": "N13",
+          "title": "La recomposition : le curseur des glucides",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "La **recomposition** (perdre du gras ET gagner du muscle en même temps) est possible, surtout chez le débutant ou le pratiquant qui reprend. Une fois les bases acquises, tout se joue sur un curseur." },
+            { "type": "quote", "speaker": "AchZod", "source": "Comment construire sa diète en 7 étapes", "ts": "76:33", "platform": "youtube", "url": "https://www.youtube.com/watch?v=JE0FG8LZe2I&t=4593s", "content": "Retenir ta masse musculaire et ne virer que le gras : à partir du moment où tu sais faire ça, c'est juste un curseur sur ta quantité de glucides — donc sur tes calories. Mieux vaut d'abord savoir comment ton corps réagit en recomp ou en sèche." },
+            { "type": "text", "content": "Le principe : protéines hautes constantes, puis on module les **glucides** vers le haut les jours d'entraînement (construire) et vers le bas les jours off (déstocker). C'est le nutrient timing appliqué à la recomp." },
+            { "type": "keypoints", "items": [
+              "Recomp = perdre du gras + gagner du muscle (surtout débutant/reprise).",
+              "Protéines hautes constantes, glucides = le curseur qu'on module.",
+              "Plus de glucides les jours d'entraînement, moins les jours off."
+            ]},
+            { "type": "quiz", "question": "Quel macro sert de 'curseur' en recomposition ?", "options": ["Les protéines", "Les glucides", "Les fibres"], "answer": 1, "explain": "On garde les protéines hautes et on module les glucides (donc les calories) selon les jours." },
+            { "type": "quiz", "question": "Quand augmenter les glucides en recomp ?", "options": ["Les jours de repos", "Les jours d'entraînement", "Jamais"], "answer": 1, "explain": "Plus de glucides les jours d'entraînement (construire), moins les jours off (déstocker)." }
+          ]
+        },
+        {
+          "n": "N15",
+          "title": "Cheat meal : ne compense pas en crashant le lendemain",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "On a vu qu'on **anticipe** un cheat le jour même. L'erreur inverse, tout aussi fréquente : vouloir 'réparer' l'écart le lendemain en s'affamant. Mauvais réflexe, physiquement et mentalement." },
+            { "type": "quote", "speaker": "AchZod & Florent Dorizon", "source": "Comment gérer un cheatmeal en 5 étapes", "ts": "11:20", "platform": "youtube", "url": "https://www.youtube.com/watch?v=7hkDbwhHig0&t=680s", "content": "Ne cherche jamais à compenser le surplus calorique d'un cheat meal le lendemain. Admettons que tu as pris un menu à 1000 calories : n'essaie pas de créer un déficit ou d'augmenter ta dépense de 1000 calories le jour suivant." },
+            { "type": "quote", "speaker": "AchZod & Florent Dorizon", "source": "Comment gérer un cheatmeal en 5 étapes", "ts": "4:55", "platform": "youtube", "url": "https://www.youtube.com/watch?v=7hkDbwhHig0&t=295s", "content": "Pour anticiper l'écart, tu diminues les glucides dans la journée, et le soir tu compenses avec des protéines maigres et des légumes." },
+            { "type": "keypoints", "items": [
+              "Anticiper AVANT (le jour même), pas 'réparer' APRÈS.",
+              "Ne pas créer un déficit brutal le lendemain d'un cheat.",
+              "Compensation douce : protéines maigres + légumes, pas famine."
+            ]},
+            { "type": "quiz", "question": "Que ne PAS faire après un cheat meal ?", "options": ["Reprendre sa diète normale", "Créer un gros déficit le lendemain pour compenser", "Boire de l'eau"], "answer": 1, "explain": "Crasher les calories le lendemain est contre-productif ; on anticipe le jour même, on ne se punit pas après." },
+            { "type": "quiz", "question": "Comment compenser un écart intelligemment ?", "options": ["S'affamer 24h", "Protéines maigres + légumes le jour même", "Doubler le cardio"], "answer": 1, "explain": "Une compensation douce (protéines maigres, légumes) le jour même vaut mieux qu'une punition le lendemain." }
+          ]
+        },
+        {
+          "n": "N20",
+          "title": "La diète flexible : 80 / 20",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La **diète flexible** (souvent appelée IIFYM) est un cadre durable : l'essentiel de ton alimentation est structuré, et une petite marge est laissée au plaisir. C'est ce qui rend une diète tenable sur le long terme." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ FITEX Paris 2023 : Calories & macros", "ts": "7:22", "platform": "youtube", "url": "https://www.youtube.com/watch?v=zjFPhC4OGXI&t=442s", "content": "La diète flexible, c'est : tu as droit à 60 à 80 % de nourriture pesée, calculée selon un dosage précis des macros et des micronutriments, et on te laisse environ 20 % par jour de liberté." },
+            { "type": "text", "content": "La clé : ces ~20 % de liberté doivent rester **dans tes totaux** (leçon 1). La flexibilité n'est pas l'anarchie — c'est du plaisir intégré au cadre." },
+            { "type": "keypoints", "items": [
+              "~80 % d'aliments de qualité, pesés → couvrent macros et micronutriments.",
+              "~20 % de liberté pour le plaisir et la tenue sur le long terme.",
+              "Les 20 % restent DANS tes totaux caloriques : flexibilité, pas anarchie."
+            ]},
+            { "type": "quiz", "question": "Quel est le principe de la diète flexible ?", "options": ["100 % de junk food", "~80 % structuré + ~20 % de liberté", "Ne rien peser jamais"], "answer": 1, "explain": "L'essentiel est cadré (qualité, macros, micro), avec une marge de liberté pour tenir sur la durée." },
+            { "type": "quiz", "question": "Les 20 % de liberté doivent…", "options": ["Ignorer les calories", "Rester dans tes totaux", "Remplacer les protéines"], "answer": 1, "explain": "La flexibilité fonctionne tant que ces écarts s'inscrivent dans le total calorique de la journée." }
+          ]
+        },
+        {
+          "n": "N16",
+          "title": "Les compléments vraiment prioritaires",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Avant les boosters et les 'brûleurs' à la mode, les compléments qui comptent vraiment sont les moins glamour : ceux qui **comblent les manques** et soutiennent la santé de base (digestion, articulations, carences)." },
+            { "type": "quote", "speaker": "AchZod (BROCAST)", "source": "BROCAST : FAQ nutrition", "ts": "20:02", "platform": "youtube", "url": "https://www.youtube.com/watch?v=IMR4fpzla5E&t=1202s", "content": "Avant de dire 'je prends un booster avant l'entraînement', les gens feraient mieux de prendre leurs probiotiques et leurs oméga-3. Le système digestif, c'est quand même le deuxième cerveau du corps humain." },
+            { "type": "quote", "speaker": "AchZod", "source": "Compléments alimentaires (FAQ)", "ts": "27:42", "platform": "youtube", "url": "https://www.youtube.com/watch?v=q9h3maJRMsA&t=1662s", "content": "Le seul complément que je prenais, c'était parfois des oméga-3, pour les articulations et le cœur, et une multivitamine pour n'avoir aucune carence." },
+            { "type": "keypoints", "items": [
+              "Priorité : oméga-3 (articulations, cœur), multivitamine (anti-carence), probiotiques (digestion).",
+              "Le booster pré-workout passe APRÈS ces bases.",
+              "Un complément comble un manque ; il ne remplace pas une bonne alimentation."
+            ]},
+            { "type": "quiz", "question": "Quels compléments prioriser avant un booster ?", "options": ["Rien, le booster d'abord", "Oméga-3, multivitamine, probiotiques", "Uniquement des brûleurs de graisse"], "answer": 1, "explain": "Les fondations santé (oméga-3, multivitamine, probiotiques) passent avant le pré-workout." },
+            { "type": "quiz", "question": "À quoi sert une multivitamine ici ?", "options": ["À remplacer les repas", "À éviter les carences", "À prendre du muscle directement"], "answer": 1, "explain": "Elle sert de filet de sécurité contre les carences, pas de substitut à l'alimentation." }
+          ]
+        },
+        {
+          "n": "N17",
+          "title": "La whey n'est qu'un complément",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La whey est pratique, mais c'est un **complément**, pas une base. Si tu peux faire un vrai repas, fais-le : les aliments entiers apportent bien plus que des protéines isolées (satiété, micronutriments)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Compléments alimentaires (FAQ)", "ts": "56:07", "platform": "youtube", "url": "https://www.youtube.com/watch?v=GTif8kNPITk&t=3367s", "content": "Je ne vais pas remplacer un repas par la whey : je peux me faire de vrais repas, donc je préfère orienter mes dépenses en compléments vers autre chose." },
+            { "type": "quote", "speaker": "AchZod", "source": "Comment construire sa diète en 7 étapes", "ts": "28:55", "platform": "youtube", "url": "https://www.youtube.com/watch?v=JE0FG8LZe2I&t=1735s", "content": "Comme compléments, j'ai toujours la même chose : whey, magnésium, oméga-3. La base." },
+            { "type": "keypoints", "items": [
+              "Whey = pratique pour compléter le total protéique, pas pour remplacer un repas.",
+              "Un vrai repas > une poudre (satiété, micronutriments).",
+              "Trio simple et suffisant : whey, magnésium, oméga-3."
+            ]},
+            { "type": "quiz", "question": "Quel est le bon usage de la whey ?", "options": ["Remplacer la plupart des repas", "Compléter le total quand un vrai repas n'est pas possible", "La base de toute la diète"], "answer": 1, "explain": "C'est un complément d'appoint pour atteindre le total, pas un substitut aux vrais repas." },
+            { "type": "quiz", "question": "Pourquoi préférer un vrai repas à une poudre ?", "options": ["C'est moins cher toujours", "Plus de satiété et de micronutriments", "Aucune raison"], "answer": 1, "explain": "Les aliments entiers rassasient davantage et apportent des micronutriments absents des isolats." }
+          ]
+        },
+        {
+          "n": "N18",
+          "title": "Les fibres : à doser selon ton objectif",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Les fibres ralentissent la digestion, abaissent la charge glycémique et améliorent la satiété. Mais leur dosage se module selon l'objectif : atout en sèche, à modérer en grosse prise de masse." },
+            { "type": "quote", "speaker": "AchZod", "source": "Nutrition & Musculation (invité)", "ts": "23:31", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Dj6VpDH6c5Y&t=1411s", "content": "Technique simple : tu ajoutes une demi-pomme à ton repas. Il y a beaucoup de fibres dedans, et ça va ralentir ta digestion." },
+            { "type": "quote", "speaker": "AchZod & invité", "source": "PODCAST 1000% : Insuline, la clef", "ts": "87:45", "platform": "youtube", "url": "https://www.youtube.com/watch?v=zvdDspzIdUk&t=5265s", "content": "Pour un gros gabarit en prise de masse, il ne faut pas trop de fibres, parce que ça t'empêche d'enchaîner les repas." },
+            { "type": "keypoints", "items": [
+              "Fibres = digestion ralentie, charge glycémique abaissée, meilleure satiété.",
+              "En sèche : un atout (elles calent).",
+              "En grosse prise de masse : à modérer (elles gênent pour manger assez)."
+            ]},
+            { "type": "quiz", "question": "Quel effet des fibres sur un repas ?", "options": ["Elles accélèrent la digestion", "Elles la ralentissent et améliorent la satiété", "Aucun effet"], "answer": 1, "explain": "Elles ralentissent la digestion, abaissent la charge glycémique et calent davantage." },
+            { "type": "quiz", "question": "Quand modérer les fibres ?", "options": ["En sèche", "En grosse prise de masse (pour pouvoir manger assez)", "Toujours les supprimer"], "answer": 1, "explain": "Trop de fibres en prise de masse rassasie trop et empêche d'atteindre le surplus." }
+          ]
+        },
+        {
+          "n": "N19",
+          "title": "L'hydratation : bois à ta soif",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "Pas besoin de compter tes litres au millilitre. Le repère le plus simple et fiable, c'est ta **soif** — en veillant surtout à bien t'hydrater autour de l'entraînement." },
+            { "type": "quote", "speaker": "AchZod (BROCAST)", "source": "BROCAST : FAQ nutrition", "ts": "5:16", "platform": "youtube", "url": "https://www.youtube.com/watch?v=IMR4fpzla5E&t=316s", "content": "Moi, je ne donne pas de chiffres, je dis toujours de boire à sa soif. Surtout pendant l'entraînement, c'est là où il faut boire, parce que la déshydratation peut engendrer beaucoup de choses négatives." },
+            { "type": "keypoints", "items": [
+              "Repère simple : boire à sa soif (pas de chiffre magique).",
+              "Priorité : bien s'hydrater autour de l'entraînement.",
+              "La déshydratation dégrade performance et récupération."
+            ]},
+            { "type": "quiz", "question": "Quel repère d'hydratation est conseillé ?", "options": ["Exactement 5 L/jour", "Boire à sa soif, surtout à l'entraînement", "Ne boire qu'aux repas"], "answer": 1, "explain": "Boire à sa soif est un repère fiable ; l'important est de bien s'hydrater autour de l'effort." },
+            { "type": "quiz", "question": "Pourquoi surveiller l'hydratation à l'entraînement ?", "options": ["Ça n'a pas d'importance", "La déshydratation nuit à la performance", "Pour boire moins"], "answer": 1, "explain": "Une déshydratation, même légère, dégrade la performance et la récupération." }
+          ]
+        }
+      ]
+    }
+  ]
+}
