@@ -139,6 +139,28 @@
   .pcard .nm{font-weight:700;flex:1;color:var(--txt)}
   .pcard .pc{font-size:14px;color:var(--purple);font-weight:800}
   .pcard .mt{margin-top:8px;color:var(--muted);font-size:12px}
+  /* ---- reprendre / toast / badges ---- */
+  .resume{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;color:#fff;
+    background:linear-gradient(135deg,var(--purple),var(--purple-d));border:none;border-radius:16px;
+    padding:14px 16px;margin:2px 0 14px;box-shadow:0 8px 24px rgba(124,92,240,.4)}
+  .resume .ri{font-size:24px}
+  .resume .rt{flex:1;min-width:0}
+  .resume .rt .a{font-size:11px;font-weight:700;opacity:.85;text-transform:uppercase;letter-spacing:.5px}
+  .resume .rt .b{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .resume .rp{font-size:24px}
+  .toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%) translateY(20px);z-index:60;
+    background:linear-gradient(135deg,#34d399,#059669);color:#fff;font-weight:700;padding:14px 22px;border-radius:14px;
+    box-shadow:0 12px 34px rgba(5,150,105,.55);opacity:0;pointer-events:none;transition:.35s cubic-bezier(.3,.8,.3,1);
+    font-size:15px;text-align:center;max-width:88%}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @keyframes pop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+  .lesson.justdone .num{animation:pop .5s}
+  .badges{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
+  .badge{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center;opacity:.35;filter:grayscale(1);transition:.2s}
+  .badge.on{opacity:1;filter:none;border-color:var(--purple-d);background:rgba(124,92,240,.12)}
+  .badge .bi{font-size:26px}
+  .badge .bl{font-size:9.5px;color:var(--muted);margin-top:5px;line-height:1.2}
+  .badge.on .bl{color:var(--txt)}
   .err{padding:40px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.6}
   .err code{color:var(--cyan);background:rgba(94,231,240,.1);padding:2px 6px;border-radius:5px}
 </style>
@@ -164,13 +186,15 @@
   <div class="r-foot"><button class="cta" id="rCta" onclick="completeLesson()">Marquer comme terminé</button></div>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <div class="nav">
   <button id="navLearn" class="on" onclick="setPage('learn')"><span class="ni">📚</span>Apprendre</button>
   <button id="navProfile" onclick="setPage('profile')"><span class="ni">👤</span>Profil</button>
 </div>
 
 <script>
-const DONE_KEY='achzod_done_v1', ACT_KEY='achzod_days_v1', QUIZ_KEY='achzod_quiz_v1';
+const DONE_KEY='achzod_done_v1', ACT_KEY='achzod_days_v1', QUIZ_KEY='achzod_quiz_v1', LAST_KEY='achzod_last_v1', BADGE_KEY='achzod_badges_v1';
 let DATA=null, THEME=null, LMAP={}, view='chapters', curChapter=null, curLesson=null, page='learn';
 const done=new Set(JSON.parse(localStorage.getItem(DONE_KEY)||'[]'));
 const save=()=>localStorage.setItem(DONE_KEY,JSON.stringify([...done]));
@@ -191,6 +215,44 @@ function addQuiz(ok){
   const q=JSON.parse(localStorage.getItem(QUIZ_KEY)||'{"a":0,"c":0}');
   q.a++; if(ok) q.c++;
   localStorage.setItem(QUIZ_KEY,JSON.stringify(q));
+}
+let toastT=null;
+function showToast(msg){
+  const t=el('toast'); t.innerHTML=msg; t.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2600);
+}
+function saveLast(cat,n){ localStorage.setItem(LAST_KEY,JSON.stringify({cat,n})); }
+function getLast(){ try{return JSON.parse(localStorage.getItem(LAST_KEY));}catch(e){return null;} }
+
+function computeStats(){
+  let total=0,doneN=0,chapsDone=0,chapsTot=0,themesDone=0;
+  DATA.modules.forEach(m=>{
+    const map={}; m.lessons.forEach(l=>map[l.n]=l);
+    total+=m.lessons.length; doneN+=m.lessons.filter(l=>done.has(l.n)).length;
+    let allTheme=true;
+    m.chapters.forEach(ch=>{ chapsTot++; const full=ch.lessons.every(x=>done.has(x));
+      if(full)chapsDone++; else allTheme=false; });
+    if(allTheme && m.lessons.length) themesDone++;
+  });
+  const q=JSON.parse(localStorage.getItem(QUIZ_KEY)||'{"a":0,"c":0}');
+  return {total,doneN,chapsDone,chapsTot,themesDone,quiz:q.c,streak:computeStreak()};
+}
+const BADGES=[
+  {ic:'🎓',bl:'1re leçon',cond:s=>s.doneN>=1},
+  {ic:'🔥',bl:'Streak 3j',cond:s=>s.streak>=3},
+  {ic:'📘',bl:'1er chapitre',cond:s=>s.chapsDone>=1},
+  {ic:'💯',bl:'25 leçons',cond:s=>s.doneN>=25},
+  {ic:'🧠',bl:'50 quiz',cond:s=>s.quiz>=50},
+  {ic:'⚡',bl:'Streak 7j',cond:s=>s.streak>=7},
+  {ic:'🏆',bl:'1 thème fini',cond:s=>s.themesDone>=1},
+  {ic:'👑',bl:'100% fini',cond:s=>s.total&&s.doneN>=s.total}
+];
+function earnedBadges(){ try{return new Set(JSON.parse(localStorage.getItem(BADGE_KEY)||'[]'));}catch(e){return new Set();} }
+function newBadge(){
+  const s=computeStats(), have=earnedBadges(); let nb=null;
+  BADGES.forEach(b=>{ if(b.cond(s)&&!have.has(b.bl)){ if(!nb)nb=b; have.add(b.bl); }});
+  localStorage.setItem(BADGE_KEY,JSON.stringify([...have]));
+  return nb;
 }
 const md=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 const el=id=>document.getElementById(id);
@@ -224,6 +286,7 @@ function renderProfile(){
   });
   const streak=computeStreak();
   const q=JSON.parse(localStorage.getItem(QUIZ_KEY)||'{"a":0,"c":0}');
+  const st=computeStats();
   el('main').innerHTML=`<div class="prof">
     <div class="avatar">🏋️</div>
     <h1>Ton profil</h1>
@@ -238,6 +301,10 @@ function renderProfile(){
       <div class="top"><span class="ic">${p.cat.icon||'📘'}</span><span class="nm">${p.cat.label||p.cat.id}</span><span class="pc">${p.pct}%</span></div>
       <div class="bar"><i style="width:${p.pct}%"></i></div>
       <div class="mt">${p.n} / ${p.t} leçons</div></div>`).join('')}
+    <div class="sec2">Badges (${BADGES.filter(b=>b.cond(st)).length}/${BADGES.length})</div>
+    <div class="badges">
+      ${BADGES.map(b=>`<div class="badge ${b.cond(st)?'on':''}"><div class="bi">${b.cond(st)?b.ic:'🔒'}</div><div class="bl">${b.bl}</div></div>`).join('')}
+    </div>
   </div>`;
 }
 
@@ -281,7 +348,7 @@ function renderChapters(){
       <h1>${THEME.title}</h1><p>${THEME.subtitle}</p>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <div class="pct"><span>${pct}% complété</span><span>${n} / ${tot} leçons</span></div>
-    </div></div>
+    </div></div>${resumeCard()}
     <div class="sec">${THEME.chapters.length} chapitres</div><div class="list">`;
   THEME.chapters.forEach((ch,i)=>{
     const p=chapProgress(ch), C=2*Math.PI*23, off=C*(1-p.pct);
@@ -321,16 +388,43 @@ function renderLessons(){
 
 function openChapter(i){curChapter=THEME.chapters[i];view='lessons';el('main').scrollTop=0;window.scrollTo(0,0);renderMain();}
 function goBack(){if(view==='lessons'){view='chapters';curChapter=null;renderMain();}}
+function resumeLast(){
+  const last=getLast(); if(!last) return;
+  const mod=DATA.modules.find(m=>m.category===last.cat); if(!mod) return;
+  page='learn'; el('navLearn').classList.add('on'); el('navProfile').classList.remove('on');
+  setTheme(mod);
+  if(LMAP[last.n]) openReader(last.n);
+}
+function resumeCard(){
+  const last=getLast(); if(!last) return '';
+  const mod=DATA.modules.find(m=>m.category===last.cat); if(!mod) return '';
+  const les=mod.lessons.find(l=>l.n===last.n); if(!les) return '';
+  const cat=(DATA.categories.find(c=>c.id===last.cat)||{}).label||'';
+  return `<div style="padding:0 16px"><button class="resume" onclick="resumeLast()">
+    <span class="ri">▶️</span><span class="rt"><span class="a">Reprendre · ${cat}</span><span class="b">${les.title}</span></span>
+    <span class="rp">›</span></button></div>`;
+}
 
 function openReader(num){
   curLesson=LMAP[num];
+  saveLast(THEME.category,num);
   el('rTag').textContent='LEÇON '+curLesson.n;
   el('rScroll').innerHTML='<h2>'+curLesson.title+'</h2>'+curLesson.blocks.map(renderBlock).join('');
   el('rCta').textContent=done.has(curLesson.n)?'✓ Terminé — relire':'Marquer comme terminé';
   el('reader').classList.add('open'); el('rScroll').scrollTop=0;
 }
 function closeReader(){el('reader').classList.remove('open');}
-function completeLesson(){done.add(curLesson.n);save();markActiveToday();renderMain();closeReader();}
+function completeLesson(){
+  const already=done.has(curLesson.n);
+  done.add(curLesson.n); save(); markActiveToday();
+  let msg='✅ Leçon terminée !';
+  const ch=THEME.chapters.find(c=>c.lessons.includes(curLesson.n));
+  if(ch && ch.lessons.every(x=>done.has(x))) msg='🎉 Chapitre terminé : '+ch.title+' !';
+  if(THEME.lessons.every(l=>done.has(l.n))) msg='🏆 Thème '+((DATA.categories.find(c=>c.id===THEME.category)||{}).label||'')+' terminé !';
+  const nb=newBadge();
+  if(!already) showToast(nb ? ('🏅 Badge débloqué : '+nb.bl) : msg);
+  renderMain(); closeReader();
+}
 
 function renderBlock(b){
   if(b.type==='text') return `<div class="blk text">${md(b.content)}</div>`;

@@ -966,9 +966,12 @@
       "subtitle": "Mécanismes, exécution, intensité et récupération",
       "chapters": [
         { "id": "t1", "icon": "🎯", "title": "Les fondamentaux de l'hypertrophie", "subtitle": "Ce qui fait grossir un muscle", "lessons": ["T01", "T02", "T03"] },
-        { "id": "t2", "icon": "⚙️", "title": "Exécution & technique", "subtitle": "Bien exécuter chaque répétition", "lessons": ["T04", "T05"] },
+        { "id": "t2", "icon": "⚙️", "title": "Exécution & technique", "subtitle": "Bien exécuter chaque répétition", "lessons": ["T04", "T05", "T15"] },
         { "id": "t3", "icon": "🔥", "title": "Techniques d'intensification", "subtitle": "Aller plus loin quand ça stagne", "lessons": ["T06", "T07"] },
-        { "id": "t4", "icon": "😴", "title": "Récupération & progression durable", "subtitle": "Là où le muscle se construit vraiment", "lessons": ["T08", "T09", "T10", "T11"] }
+        { "id": "t4", "icon": "🏃", "title": "Cardio & conditionnement", "subtitle": "Ajouter de la dépense intelligemment", "lessons": ["T12"] },
+        { "id": "t5", "icon": "🩹", "title": "Mobilité & prévention des blessures", "subtitle": "Épaules, genoux et articulations", "lessons": ["T13", "T14"] },
+        { "id": "t6", "icon": "😴", "title": "Récupération & progression durable", "subtitle": "Là où le muscle se construit vraiment", "lessons": ["T08", "T09", "T10", "T11"] },
+        { "id": "t7", "icon": "📈", "title": "Débutant vs avancé", "subtitle": "Adapter selon ton niveau", "lessons": ["T16"] }
       ],
       "lessons": [
         {
@@ -1147,6 +1150,90 @@
             ]},
             { "type": "quiz", "question": "Quel signal simple peut trahir un surentraînement ?", "options": ["Une baisse de la fréquence cardiaque au repos", "Une hausse de la fréquence cardiaque au repos", "Rien de mesurable"], "answer": 1, "explain": "Une FC de repos qui grimpe de 10-15 % signale souvent un stress aigu / surentraînement." },
             { "type": "quiz", "question": "Que faire face à ces signaux ?", "options": ["Augmenter le volume", "Lever le pied, dormir, gérer le stress", "Ignorer"], "answer": 1, "explain": "On récupère : deload, sommeil, gestion du stress, avant de repartir." }
+          ]
+        },
+        {
+          "n": "T15",
+          "title": "L'étirement sous charge : puissant mais prudent",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Un muscle travaillé en **position étirée** (amplitude complète, charge dans l'étirement) reçoit un signal d'hypertrophie bien plus fort qu'en position raccourcie. C'est un des leviers les plus efficaces — mais il exige des articulations saines." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "68:41", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Si tu descends jusqu'à ce que tes épaules soient sous tes coudes, tes pectoraux sont en étirement maximal : le signal hypertrophique est puissant. Si tu descends à moitié, ils travaillent en position raccourcie, le signal est faible. Attention cependant : les dips profonds demandent une bonne mobilité d'épaule. Si tu as une instabilité, un antécédent de luxation ou des tendinites, sois prudent." },
+            { "type": "keypoints", "items": [
+              "Position étirée sous charge = signal d'hypertrophie fort.",
+              "Amplitude partielle en position raccourcie = signal faible.",
+              "Prudence si épaule instable / antécédent de luxation / tendinite."
+            ]},
+            { "type": "quiz", "question": "Quelle position maximise le signal d'hypertrophie ?", "options": ["La position raccourcie", "La position étirée sous charge", "Peu importe"], "answer": 1, "explain": "Charger le muscle en étirement (amplitude complète) donne le stimulus le plus fort." },
+            { "type": "quiz", "question": "Quelle précaution avec les dips profonds ?", "options": ["Aucune", "Prudence si instabilité ou antécédent de blessure d'épaule", "Toujours les éviter"], "answer": 1, "explain": "L'étirement profond exige une bonne mobilité/stabilité d'épaule ; à adapter si antécédents." }
+          ]
+        },
+        {
+          "n": "T12",
+          "title": "Cardio : gérer l'impact et l'intensité",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Tous les cardios ne se valent pas pour tes articulations. Le paramètre clé, c'est l'**impact** : plus il est élevé, plus le stress articulaire (et l'intensité) monte." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ entraînement & cardio", "ts": "68:05", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Na2Uk74Waeg&t=4085s", "content": "La marche rapide, en longue durée, c'est un cardio à faible impact. Dès que tu passes à du cardio d'impact, c'est plus stressant pour les genoux, les chevilles, les lombaires. Et qui dit impact dit plus haute intensité." },
+            { "type": "text", "content": "En pratique : **faible impact** (marche, vélo, rameur, elliptique) pour ajouter de la dépense sans fatiguer les articulations ; **haute intensité / impact** (HIIT, sprints) avec parcimonie, si tu es solide et récupères bien." },
+            { "type": "keypoints", "items": [
+              "Faible impact (marche rapide, vélo) = dépense sans stress articulaire.",
+              "Impact élevé (course, sauts, HIIT) = plus intense mais plus stressant.",
+              "Choisir selon tes articulations, ton poids et ta récupération."
+            ]},
+            { "type": "quiz", "question": "Quel cardio stresse le moins les articulations ?", "options": ["Les sprints", "La marche rapide / le vélo (faible impact)", "Les sauts"], "answer": 1, "explain": "Le cardio à faible impact ajoute de la dépense sans surcharger genoux, chevilles et lombaires." },
+            { "type": "quiz", "question": "Qu'implique un cardio 'd'impact' ?", "options": ["Moins d'intensité", "Plus de stress articulaire et d'intensité", "Aucune différence"], "answer": 1, "explain": "L'impact augmente le stress sur les articulations et va de pair avec une intensité plus haute." }
+          ]
+        },
+        {
+          "n": "T13",
+          "title": "L'épaule : mobilité maximale, stabilité minimale",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "L'épaule est l'articulation la plus **mobile** du corps — et c'est justement ce qui la rend **fragile**. Elle mise tout sur les muscles et tendons pour la stabilité, d'où les blessures fréquentes en muscu." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Testostérone et prise de sang", "ts": "58:50", "platform": "youtube", "url": "https://www.youtube.com/watch?v=G3VpaDrWJGo&t=3530s", "content": "L'épaule, c'est l'articulation la plus mobile du corps humain. Et cette mobilité extraordinaire, elle a un prix terrible : quasiment zéro stabilité osseuse." },
+            { "type": "text", "content": "Conséquence pratique : renforce les **rotateurs** et le haut du dos, échauffe l'épaule avant les poussées, et surveille l'amplitude sur les mouvements à risque (développé nuque, dips profonds instables)." },
+            { "type": "keypoints", "items": [
+              "Épaule = articulation la plus mobile → la moins stable osseusement.",
+              "Sa stabilité dépend des muscles/tendons : renforce-les (rotateurs, dos).",
+              "Échauffement spécifique avant les poussées ; prudence sur les amplitudes extrêmes."
+            ]},
+            { "type": "quiz", "question": "Pourquoi l'épaule est-elle si sujette aux blessures ?", "options": ["Elle est trop rigide", "Sa grande mobilité s'accompagne d'une très faible stabilité osseuse", "Elle n'a pas de muscles"], "answer": 1, "explain": "L'articulation la plus mobile est aussi la moins stable : tout repose sur les muscles et tendons." },
+            { "type": "quiz", "question": "Comment protéger ses épaules ?", "options": ["Ne jamais les travailler", "Renforcer rotateurs/dos + échauffer + surveiller l'amplitude", "Toujours charger au maximum"], "answer": 1, "explain": "On compense le manque de stabilité osseuse par du renforcement, de l'échauffement et une amplitude maîtrisée." }
+          ]
+        },
+        {
+          "n": "T14",
+          "title": "Le genou : d'abord un problème de biomécanique",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Le genou fait souvent mal… mais le problème vient rarement du genou lui-même. Il est **pris en sandwich** entre la cheville et la hanche : si l'une des deux fonctionne mal, c'est le genou qui trinque." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Blessures épaules, genoux, coudes, dos", "ts": "71:25", "platform": "youtube", "url": "https://www.youtube.com/watch?v=veuCeO1cpts&t=4285s", "content": "Le genou, c'est un peu plus compliqué, parce qu'il est pris en sandwich entre la cheville et la hanche. Il y a trop de choses qui interviennent. Le cœur du problème dans ces histoires de douleurs de genou, c'est la biomécanique." },
+            { "type": "text", "content": "Donc avant de blâmer le genou : travaille la **mobilité de cheville** et la **force/stabilité de hanche**. Souvent, une douleur de genou se règle en amont ou en aval." },
+            { "type": "keypoints", "items": [
+              "Le genou est coincé entre cheville et hanche : il subit leurs dysfonctions.",
+              "Cœur du problème = biomécanique, pas 'le genou' isolément.",
+              "Travailler mobilité de cheville + stabilité de hanche."
+            ]},
+            { "type": "quiz", "question": "D'où vient souvent une douleur de genou ?", "options": ["Uniquement du genou", "D'un problème de biomécanique (cheville / hanche)", "Du manque de protéines"], "answer": 1, "explain": "Le genou subit les dysfonctions de la cheville et de la hanche : le problème est souvent ailleurs." },
+            { "type": "quiz", "question": "Que travailler pour des genoux sains ?", "options": ["Rien", "Mobilité de cheville + stabilité de hanche", "Seulement les quadriceps"], "answer": 1, "explain": "On corrige en amont/aval : cheville mobile et hanche stable soulagent le genou." }
+          ]
+        },
+        {
+          "n": "T16",
+          "title": "Débutant vs avancé : la récupération n'est pas la même",
+          "duration": "4 min",
+          "blocks": [
+            { "type": "text", "content": "Après l'effort, ton corps entre en **phase de reconstruction** : c'est là qu'il grandit. Mais la durée de cette phase dépend énormément de ton niveau — ce qui change toute la façon de programmer." },
+            { "type": "quote", "speaker": "AchZod / Milos Sarcev", "source": "Milos Sarcev — Masterclass biomécanique", "ts": "43:57", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La phase de résistance, c'est celle où ton corps combat le stress et reconstruit : la synthèse protéique augmente, les fibres endommagées sont réparées, les tendons se renforcent, les connexions neuromusculaires s'améliorent. C'est là que tu grandis. Chez un débutant, elle dure 48 à 72 heures ; chez un avancé, elle peut durer 5 à 7 jours, parfois plus." },
+            { "type": "text", "content": "Traduction : un **débutant** peut solliciter un muscle souvent (récupération rapide) et progresse vite. Un **avancé** génère des dommages plus profonds → il a besoin de plus de repos entre deux séances du même muscle et progresse plus lentement." },
+            { "type": "keypoints", "items": [
+              "La croissance a lieu pendant la phase de reconstruction post-effort.",
+              "Débutant : récup 48-72 h → fréquence élevée possible, gains rapides.",
+              "Avancé : récup 5-7 j → plus de repos par muscle, progression plus lente."
+            ]},
+            { "type": "quiz", "question": "Combien de temps dure la reconstruction chez un débutant ?", "options": ["5 à 7 jours", "48 à 72 heures", "Quelques minutes"], "answer": 1, "explain": "Chez le débutant, la phase de résistance dure ~48-72 h : il récupère vite et peut s'entraîner souvent." },
+            { "type": "quiz", "question": "Pourquoi un avancé doit-il plus espacer ses séances par muscle ?", "options": ["Il est paresseux", "Ses dommages musculaires sont plus profonds (récup 5-7 j)", "Il n'a plus besoin de récupérer"], "answer": 1, "explain": "Plus le niveau est élevé, plus les dommages sont profonds et la récupération longue." }
           ]
         }
       ]
