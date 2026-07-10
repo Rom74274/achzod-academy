@@ -75,8 +75,21 @@
               "Le balancier insuline/glucagon régule toute ton énergie.",
               "Résistance à l'insuline = gras stocké + glucagon étouffé."
             ]},
+            { "type": "deep", "blocks": [
+              { "type": "text", "content": "En détail, deux populations de cellules du pancréas orchestrent ce balancier : les cellules **bêta** libèrent l'insuline quand la glycémie monte, les cellules **alpha** libèrent le glucagon quand elle descend." },
+              { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "18:31", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Quand tu ne manges pas, quand ta glycémie descend, les cellules alpha de ton pancréas sécrètent du glucagon. Et le glucagon dit à ton foie : libère le glucose que tu as stocké, remets-le dans le sang, nourris le cerveau et les muscles. L'insuline stocke, le glucagon libère : c'est un balancier perpétuel, et c'est lui qui régule tout ton métabolisme énergétique." },
+              { "type": "text", "content": "**Nuance importante** qu'AchZod prend soin de préciser : trop d'insuline, trop souvent, *peut* rendre le corps résistant à l'insuline — mais **ce n'est pas la seule cause**. La génétique et d'autres facteurs comptent aussi. On évite donc le raccourci « le sucre seul rend diabétique »." },
+              { "type": "text", "content": "Enfin, ce balancier est la **base des médicaments GLP-1** (Ozempic, Mounjaro) : leur nom même — *glucagon-like peptide* — vient de là. On l'approfondit dans le chapitre Avancé." },
+              { "type": "keypoints", "items": [
+                "Cellules bêta → insuline (glycémie haute) ; cellules alpha → glucagon (glycémie basse).",
+                "En jeûne, le glucagon fait libérer le glucose du foie pour nourrir cerveau et muscles.",
+                "Résistance à l'insuline : l'excès d'insuline en est UNE cause, pas la seule (génétique, etc.).",
+                "Ce balancier est le socle des médicaments GLP-1."
+              ]}
+            ]},
             { "type": "quiz", "question": "Quel est le rôle du glucagon ?", "options": ["Stocker le glucose dans les cellules", "Libérer le glucose stocké par le foie", "Bloquer la lipolyse"], "answer": 1, "explain": "Le glucagon est le miroir de l'insuline : quand la glycémie baisse, il ordonne au foie de relâcher le glucose stocké." },
-            { "type": "quiz", "question": "Comment résumer le couple insuline / glucagon ?", "options": ["Les deux stockent", "L'insuline stocke, le glucagon libère", "Les deux libèrent"], "answer": 1, "explain": "C'est un balancier perpétuel : l'insuline range l'énergie, le glucagon la relâche." }
+            { "type": "quiz", "question": "Comment résumer le couple insuline / glucagon ?", "options": ["Les deux stockent", "L'insuline stocke, le glucagon libère", "Les deux libèrent"], "answer": 1, "explain": "C'est un balancier perpétuel : l'insuline range l'énergie, le glucagon la relâche." },
+            { "type": "quiz", "question": "Quelles cellules du pancréas sécrètent le glucagon ?", "options": ["Les cellules bêta", "Les cellules alpha", "Les cellules du foie"], "answer": 1, "explain": "Les cellules alpha sécrètent le glucagon (glycémie basse) ; les cellules bêta sécrètent l'insuline (glycémie haute)." }
           ]
         },
         {
