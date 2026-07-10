@@ -15,7 +15,7 @@
       "title": "Les hormones, le vrai pilote de ta composition corporelle",
       "subtitle": "Comprends les mécanismes que 99% des coachs ignorent",
       "chapters": [
-        { "id": "c1", "icon": "🎯", "title": "Les fondamentaux", "subtitle": "Le système hormonal et ses grands acteurs", "lessons": ["01", "16", "02", "03", "17", "32", "06"] },
+        { "id": "c1", "icon": "🎯", "title": "Les fondamentaux", "subtitle": "Le système hormonal et ses grands acteurs", "lessons": ["H34", "16", "01", "H35", "02", "17", "H36", "03", "32", "06"] },
         { "id": "c2", "icon": "⚡", "title": "Insuline, glucides & timing", "subtitle": "Maîtriser ton carburant au quotidien", "lessons": ["04", "08", "11", "21"] },
         { "id": "c3", "icon": "🔥", "title": "Métabolisme, thyroïde & faim", "subtitle": "Ce qui règle ta dépense d'énergie", "lessons": ["07", "13"] },
         { "id": "c4", "icon": "🥗", "title": "Sèche, jeûne & recomposition", "subtitle": "Perdre du gras sans casser le métabolisme", "lessons": ["30", "31"] },
@@ -75,21 +75,8 @@
               "Le balancier insuline/glucagon régule toute ton énergie.",
               "Résistance à l'insuline = gras stocké + glucagon étouffé."
             ]},
-            { "type": "deep", "blocks": [
-              { "type": "text", "content": "En détail, deux populations de cellules du pancréas orchestrent ce balancier : les cellules **bêta** libèrent l'insuline quand la glycémie monte, les cellules **alpha** libèrent le glucagon quand elle descend." },
-              { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "18:31", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Quand tu ne manges pas, quand ta glycémie descend, les cellules alpha de ton pancréas sécrètent du glucagon. Et le glucagon dit à ton foie : libère le glucose que tu as stocké, remets-le dans le sang, nourris le cerveau et les muscles. L'insuline stocke, le glucagon libère : c'est un balancier perpétuel, et c'est lui qui régule tout ton métabolisme énergétique." },
-              { "type": "text", "content": "**Nuance importante** qu'AchZod prend soin de préciser : trop d'insuline, trop souvent, *peut* rendre le corps résistant à l'insuline — mais **ce n'est pas la seule cause**. La génétique et d'autres facteurs comptent aussi. On évite donc le raccourci « le sucre seul rend diabétique »." },
-              { "type": "text", "content": "Enfin, ce balancier est la **base des médicaments GLP-1** (Ozempic, Mounjaro) : leur nom même — *glucagon-like peptide* — vient de là. On l'approfondit dans le chapitre Avancé." },
-              { "type": "keypoints", "items": [
-                "Cellules bêta → insuline (glycémie haute) ; cellules alpha → glucagon (glycémie basse).",
-                "En jeûne, le glucagon fait libérer le glucose du foie pour nourrir cerveau et muscles.",
-                "Résistance à l'insuline : l'excès d'insuline en est UNE cause, pas la seule (génétique, etc.).",
-                "Ce balancier est le socle des médicaments GLP-1."
-              ]}
-            ]},
             { "type": "quiz", "question": "Quel est le rôle du glucagon ?", "options": ["Stocker le glucose dans les cellules", "Libérer le glucose stocké par le foie", "Bloquer la lipolyse"], "answer": 1, "explain": "Le glucagon est le miroir de l'insuline : quand la glycémie baisse, il ordonne au foie de relâcher le glucose stocké." },
-            { "type": "quiz", "question": "Comment résumer le couple insuline / glucagon ?", "options": ["Les deux stockent", "L'insuline stocke, le glucagon libère", "Les deux libèrent"], "answer": 1, "explain": "C'est un balancier perpétuel : l'insuline range l'énergie, le glucagon la relâche." },
-            { "type": "quiz", "question": "Quelles cellules du pancréas sécrètent le glucagon ?", "options": ["Les cellules bêta", "Les cellules alpha", "Les cellules du foie"], "answer": 1, "explain": "Les cellules alpha sécrètent le glucagon (glycémie basse) ; les cellules bêta sécrètent l'insuline (glycémie haute)." }
+            { "type": "quiz", "question": "Comment résumer le couple insuline / glucagon ?", "options": ["Les deux stockent", "L'insuline stocke, le glucagon libère", "Les deux libèrent"], "answer": 1, "explain": "C'est un balancier perpétuel : l'insuline range l'énergie, le glucagon la relâche." }
           ]
         },
         {
@@ -613,6 +600,55 @@
             ]},
             { "type": "quiz", "question": "Quel effet du cortisol chronique sur la dopamine ?", "options": ["Il augmente les récepteurs", "Il réduit le nombre de récepteurs (neurones moins sensibles)", "Aucun effet"], "answer": 1, "explain": "Le cortisol chronique fait baisser le nombre de récepteurs à la dopamine : les neurones y deviennent moins sensibles." },
             { "type": "quiz", "question": "Quelle conséquence concrète d'un système dopaminergique désensibilisé ?", "options": ["Plus de motivation", "Baisse de motivation et envies compensatoires (sucre)", "Meilleur sommeil"], "answer": 1, "explain": "Moins de sensibilité à la dopamine = moins de plaisir/élan et davantage de compensations comme le sucre." }
+          ]
+        },
+        {
+          "n": "H34",
+          "title": "Une hormone, c'est un messager",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "Avant tout le reste, comprends la brique de base : une hormone est une **molécule messagère**. Une glande (ou un tissu) la sécrète, elle voyage dans le sang, et va délivrer un **ordre précis** à des organes cibles. Tout le système hormonal, c'est de la **communication**." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ Métabolisme : tout ce que tu crois savoir", "ts": "9:44", "platform": "youtube", "url": "https://www.youtube.com/watch?v=_6JNRHWc0jw&t=584s", "content": "Ton gras, en plus de stocker de l'énergie, il fabrique une hormone qui s'appelle la leptine. La leptine, c'est le messager qui monte au cerveau." },
+            { "type": "text", "content": "Retiens ce modèle : **un émetteur** (glande/tissu) → **un message** (l'hormone) → **un destinataire** (l'organe cible). Toutes les leçons qui suivent ne sont que des variantes de ce schéma." },
+            { "type": "keypoints", "items": [
+              "Hormone = messager chimique sécrété par une glande ou un tissu.",
+              "Elle voyage dans le sang et délivre un ordre à un organe cible.",
+              "Le système hormonal est un réseau de communication."
+            ]},
+            { "type": "quiz", "question": "Qu'est-ce qu'une hormone, fondamentalement ?", "options": ["Un muscle", "Un messager chimique", "Un aliment"], "answer": 1, "explain": "C'est une molécule messagère : émetteur → message → organe cible." },
+            { "type": "quiz", "question": "La leptine, fabriquée par le gras, informe le cerveau de quoi ?", "options": ["De l'heure", "De tes réserves d'énergie", "De ta force"], "answer": 1, "explain": "La leptine est le messager qui renseigne le cerveau sur l'état de tes réserves." }
+          ]
+        },
+        {
+          "n": "H35",
+          "title": "Le rythme pulsatile de la GH",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La GH n'est pas libérée en continu : elle sort par **pics** (pulses) répartis sur la journée. Et le plus gros pic est **nocturne** — c'est pour ça que le sommeil est non négociable pour ta GH." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "3:40", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "La GH n'est pas libérée en continu, ce n'est pas un robinet qui coule : elle est libérée en pulses, en pics. Tu as des vagues de GH qui montent et descendent tout au long de la journée. Et le plus gros pic se produit la nuit, pendant les phases 3 et 4 du sommeil profond, dans les 60 à 90 premières minutes." },
+            { "type": "keypoints", "items": [
+              "La GH sort par pics (pulses), pas en continu.",
+              "Le plus gros pic est nocturne, en sommeil profond (phases 3-4).",
+              "Mal dormir = saborder ton principal pic de GH."
+            ]},
+            { "type": "quiz", "question": "Comment la GH est-elle libérée ?", "options": ["En continu, comme un robinet", "Par pics (pulses)", "Une seule fois par semaine"], "answer": 1, "explain": "Elle est sécrétée par vagues/pics tout au long de la journée." },
+            { "type": "quiz", "question": "Quand se produit le plus gros pic de GH ?", "options": ["Au réveil", "La nuit, en sommeil profond", "Après le sport"], "answer": 1, "explain": "Le pic majeur survient la nuit, pendant les phases 3-4 du sommeil profond." }
+          ]
+        },
+        {
+          "n": "H36",
+          "title": "Les cellules alpha & bêta du pancréas",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "Ton **pancréas** est une double usine hormonale. Deux types de cellules y gèrent ta glycémie **en miroir** : les cellules **bêta** produisent l'insuline (quand la glycémie monte), les cellules **alpha** produisent le glucagon (quand elle descend)." },
+            { "type": "quote", "speaker": "AchZod", "source": "Peptides : La Masterclass interdite", "ts": "18:31", "platform": "spotify", "url": "https://open.spotify.com/show/13YOcDPkyNLWNJveCP5alH", "content": "Quand tu ne manges pas, quand ta glycémie descend, les cellules alpha de ton pancréas sécrètent du glucagon. Et le glucagon dit à ton foie : libère le glucose que tu as stocké, remets-le dans le sang, nourris le cerveau et les muscles." },
+            { "type": "keypoints", "items": [
+              "Cellules bêta → insuline (glycémie haute).",
+              "Cellules alpha → glucagon (glycémie basse).",
+              "C'est la source physique du 'balancier' vu à la leçon suivante."
+            ]},
+            { "type": "quiz", "question": "Quelles cellules sécrètent l'insuline ?", "options": ["Les cellules alpha", "Les cellules bêta", "Les cellules du foie"], "answer": 1, "explain": "Les cellules bêta produisent l'insuline quand la glycémie monte." },
+            { "type": "quiz", "question": "Quelles cellules sécrètent le glucagon ?", "options": ["Les cellules bêta", "Les cellules alpha", "Les neurones"], "answer": 1, "explain": "Les cellules alpha produisent le glucagon quand la glycémie descend." }
           ]
         }
       ]
