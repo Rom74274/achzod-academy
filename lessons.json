@@ -23,7 +23,8 @@
         { "id": "c6", "icon": "🧔", "title": "Testostérone & œstrogènes", "subtitle": "L'équilibre androgènes / œstrogènes", "lessons": ["10", "15", "19", "14", "20", "29"] },
         { "id": "c7", "icon": "🌸", "title": "Hormones féminines & cycle", "subtitle": "Comprendre le cycle menstruel", "lessons": ["26", "27", "28"] },
         { "id": "c8", "icon": "🧪", "title": "Avancé : peptides & pharmacologie", "subtitle": "GH, sécrétagogues et GLP-1", "lessons": ["12", "22", "23"] },
-        { "id": "c9", "icon": "🩸", "title": "Passer à l'action", "subtitle": "Bilan sanguin et fondation", "lessons": ["24", "25"] }
+        { "id": "c9", "icon": "🩸", "title": "Passer à l'action", "subtitle": "Bilan sanguin et fondation", "lessons": ["24", "25"] },
+        { "id": "c10", "icon": "🔬", "title": "Approfondissements", "subtitle": "Mécanismes précis (pipeline vérifié)", "lessons": ["H37", "H39", "H38", "H41", "H40", "H42"] }
       ],
       "lessons": [
         {
@@ -649,6 +650,102 @@
             ]},
             { "type": "quiz", "question": "Quelles cellules sécrètent l'insuline ?", "options": ["Les cellules alpha", "Les cellules bêta", "Les cellules du foie"], "answer": 1, "explain": "Les cellules bêta produisent l'insuline quand la glycémie monte." },
             { "type": "quiz", "question": "Quelles cellules sécrètent le glucagon ?", "options": ["Les cellules bêta", "Les cellules alpha", "Les neurones"], "answer": 1, "explain": "Les cellules alpha produisent le glucagon quand la glycémie descend." }
+          ]
+        },
+        {
+          "n": "H37",
+          "title": "Comment la testostérone agit sur tes gènes",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La testostérone n'agit pas 'dans le vide' : elle se fixe sur un **récepteur androgénique** et va directement activer, dans le noyau de la cellule, les **gènes de la croissance musculaire**. C'est de la biologie au niveau de l'ADN." },
+            { "type": "quote", "speaker": "AchZod", "source": "Œstrogènes, Testostérone, Trenbolone et métabolisme", "ts": "39:50", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Z5gjTEbD90Q&t=2390s", "content": "Cette liaison va stimuler directement la transcription des gènes responsables de la croissance musculaire. Imagine que la testostérone, c'est la clé, et les récepteurs androgéniques, la serrure." },
+            { "type": "keypoints", "items": [
+              "Testostérone = clé ; récepteur androgénique = serrure.",
+              "Une fois liée, elle active les gènes de construction musculaire.",
+              "Sans récepteurs sensibles, même beaucoup de testo agit peu."
+            ]},
+            { "type": "quiz", "question": "Comment la testostérone construit-elle du muscle ?", "options": ["En brûlant du gras", "En activant les gènes de croissance via son récepteur", "En bloquant l'insuline"], "answer": 1, "explain": "Liée à son récepteur androgénique, elle stimule la transcription des gènes de croissance musculaire." },
+            { "type": "quiz", "question": "Dans la métaphore d'AchZod, le récepteur androgénique est…", "options": ["La clé", "La serrure", "La porte"], "answer": 1, "explain": "La testostérone est la clé, le récepteur androgénique la serrure." }
+          ]
+        },
+        {
+          "n": "H38",
+          "title": "GH & lipolyse : le rôle de la HSL",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "On sait que la GH brûle le gras. Voici **comment** concrètement : elle active une enzyme dans tes cellules graisseuses, la **HSL** (lipase hormono-sensible), qui déclenche le déstockage des graisses." },
+            { "type": "quote", "speaker": "AchZod", "source": "FAQ : Montres connectées | Vitamine D et Testostérone", "ts": "13:07", "platform": "youtube", "url": "https://www.youtube.com/watch?v=auDDhI7Ou-s&t=787s", "content": "La GH va stimuler une enzyme dans tes cellules adipeuses qu'on appelle la HSL, l'hormone-sensitive lipase. C'est vraiment elle qui dicte la lipolyse." },
+            { "type": "keypoints", "items": [
+              "La GH active la HSL (lipase hormono-sensible).",
+              "La HSL est l'enzyme qui déclenche le déstockage des graisses.",
+              "C'est le mécanisme concret derrière 'la GH est lipolytique'."
+            ]},
+            { "type": "quiz", "question": "Quelle enzyme la GH active-t-elle pour brûler le gras ?", "options": ["La HSL (lipase hormono-sensible)", "L'amylase", "La pepsine"], "answer": 0, "explain": "La GH stimule la HSL, qui déclenche la lipolyse dans les cellules adipeuses." },
+            { "type": "quiz", "question": "Que fait la HSL ?", "options": ["Elle stocke le gras", "Elle déclenche le déstockage des graisses", "Elle digère les protéines"], "answer": 1, "explain": "La HSL est l'enzyme clé de la lipolyse (libération des graisses)." }
+          ]
+        },
+        {
+          "n": "H39",
+          "title": "D'où vient la testostérone : cholestérol & cellules de Leydig",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "La testostérone est fabriquée dans les **cellules de Leydig** (dans les testicules), à partir du **cholestérol**. C'est le prolongement direct de la leçon sur le cholestérol : sans matière première, l'usine tourne au ralenti." },
+            { "type": "quote", "speaker": "AchZod", "source": "Œstrogènes, Testostérone, Trenbolone et métabolisme", "ts": "16:45", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Z5gjTEbD90Q&t=1005s", "content": "Si votre corps manque de cholestérol pour fabriquer des hormones, les membranes cellulaires, notamment les cellules de Leydig, perdent leur efficacité. Il en résulte une diminution puis une chute de la testostérone." },
+            { "type": "keypoints", "items": [
+              "Testostérone fabriquée par les cellules de Leydig (testicules).",
+              "Matière première = le cholestérol.",
+              "Diète trop pauvre en lipides → cellules de Leydig moins efficaces → testo en baisse."
+            ]},
+            { "type": "quiz", "question": "Quelles cellules fabriquent la testostérone ?", "options": ["Les cellules de Leydig", "Les cellules alpha", "Les neurones"], "answer": 0, "explain": "Les cellules de Leydig, dans les testicules, produisent la testostérone à partir du cholestérol." },
+            { "type": "quiz", "question": "Quel est le lien avec les lipides alimentaires ?", "options": ["Aucun", "Le cholestérol est la matière première de la testostérone", "Ils bloquent la testostérone"], "answer": 1, "explain": "Sans cholestérol suffisant, les cellules de Leydig produisent moins de testostérone." }
+          ]
+        },
+        {
+          "n": "H40",
+          "title": "Pourquoi le stress te pousse vers le sucre",
+          "duration": "3 min",
+          "blocks": [
+            { "type": "text", "content": "Les envies de sucre sous stress ne sont pas qu'un manque de volonté : il y a une **base chimique**. Les glucides déclenchent l'insuline, qui favorise l'entrée du **tryptophane** dans le cerveau → plus de sérotonine → apaisement." },
+            { "type": "quote", "speaker": "AchZod", "source": "Rétatrutide, sucre, jeûne : les 4 vérités", "ts": "102:53", "platform": "youtube", "url": "https://www.youtube.com/watch?v=RSXPcnKBSEw&t=6173s", "content": "La combinaison glucide + insuline + tryptophane est exactement ce que le sucre apporte de plus efficace. Ton cerveau te pousse vers le sucre par recherche d'apaisement chimique, de réconfort pour certains." },
+            { "type": "keypoints", "items": [
+              "Glucides → insuline → entrée du tryptophane dans le cerveau → sérotonine.",
+              "Le 'réconfort' du sucre a une vraie base chimique.",
+              "À relier au cortisol chronique qui désensibilise la dopamine (envies compensatoires)."
+            ]},
+            { "type": "quiz", "question": "Pourquoi le cerveau réclame du sucre sous stress ?", "options": ["Par pur manque de volonté", "Pour un apaisement chimique (tryptophane → sérotonine)", "Pour brûler du gras"], "answer": 1, "explain": "Glucides + insuline facilitent l'entrée du tryptophane au cerveau, précurseur de sérotonine (apaisement)." },
+            { "type": "quiz", "question": "Quel trio le sucre apporte-t-il efficacement ?", "options": ["Glucide + insuline + tryptophane", "Protéine + lipide + fibre", "Sodium + eau + potassium"], "answer": 0, "explain": "C'est cette combinaison qui produit l'effet d'apaisement recherché." }
+          ]
+        },
+        {
+          "n": "H41",
+          "title": "La glycémie : le vrai fléau, souvent silencieux",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "Avant de t'inquiéter de ta testostérone ou de ton cortisol, regarde ta **glycémie**. C'est, selon AchZod, le problème n°1 aujourd'hui — et souvent invisible jusqu'au diagnostic." },
+            { "type": "quote", "speaker": "AchZod", "source": "Biomécanique Podcast #129", "ts": "50:25", "platform": "youtube", "url": "https://www.youtube.com/watch?v=LGp1ZaXcE_E&t=3025s", "content": "Un truc qui va de plus en plus mal, ce n'est ni la testostérone ni le cortisol, c'est la glycémie. J'ai beaucoup d'élèves en pré-diabète, voire en diabète de type 2 sans le savoir. C'est le fléau, avant même les problèmes d'hormones." },
+            { "type": "keypoints", "items": [
+              "La glycémie est le problème métabolique n°1, avant les autres hormones.",
+              "Beaucoup de gens sont en pré-diabète sans le savoir.",
+              "À surveiller via l'hémoglobine glyquée (HbA1c) sur ta prise de sang."
+            ]},
+            { "type": "quiz", "question": "Quel est, selon AchZod, le fléau métabolique n°1 ?", "options": ["La testostérone basse", "La glycémie", "Le cortisol"], "answer": 1, "explain": "La glycémie déréglée (souvent silencieuse) précède et aggrave les autres problèmes hormonaux." },
+            { "type": "quiz", "question": "Comment repérer un problème de glycémie ?", "options": ["Impossible", "Via l'HbA1c sur une prise de sang", "En se pesant"], "answer": 1, "explain": "L'hémoglobine glyquée révèle la glycémie moyenne et un éventuel pré-diabète." }
+          ]
+        },
+        {
+          "n": "H42",
+          "title": "Repérer un excès d'œstrogènes (chez l'homme)",
+          "duration": "2 min",
+          "blocks": [
+            { "type": "text", "content": "Un repère visuel simple d'un déséquilibre œstrogènes/testostérone chez l'homme : un stockage de gras de type **gynoïde** — hanches et bas de la poitrine 'féminisés'." },
+            { "type": "quote", "speaker": "AchZod", "source": "Nutrition & Musculation (invité)", "ts": "11:30", "platform": "youtube", "url": "https://www.youtube.com/watch?v=Dj6VpDH6c5Y&t=690s", "content": "Si tu as des hanches de femme et le bas des pecs un peu comme des femmes, c'est que tu as un trop-plein d'œstrogènes." },
+            { "type": "keypoints", "items": [
+              "Stockage gynoïde (hanches, bas de poitrine) = signal d'excès d'œstrogènes.",
+              "Souvent lié à trop de masse grasse (aromatase → conversion en œstrogènes).",
+              "La solution passe d'abord par la perte de gras, pas par des molécules."
+            ]},
+            { "type": "quiz", "question": "Quel signe visuel évoque un excès d'œstrogènes chez l'homme ?", "options": ["Des épaules larges", "Un stockage type hanches / bas de poitrine 'féminisé'", "Des mollets développés"], "answer": 1, "explain": "Un stockage gynoïde signale souvent un ratio œstrogènes/testo déséquilibré." },
+            { "type": "quiz", "question": "Quelle est la première cause à corriger ?", "options": ["L'excès de masse grasse (aromatase)", "Le manque de cardio", "Trop de protéines"], "answer": 0, "explain": "Plus de gras = plus d'aromatase = plus de conversion en œstrogènes : on perd d'abord le gras." }
           ]
         }
       ]
