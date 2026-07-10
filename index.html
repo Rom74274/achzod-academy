@@ -262,7 +262,7 @@ function newBadge(){
   localStorage.setItem(BADGE_KEY,JSON.stringify([...have]));
   return nb;
 }
-const md=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const md=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>');
 const el=id=>document.getElementById(id);
 
 const SRC=new URLSearchParams(location.search).get('data')||'lessons.json';
@@ -413,25 +413,36 @@ function resumeCard(){
     <span class="rp">›</span></button></div>`;
 }
 
+function chapterOf(num){ return THEME.chapters.find(c=>c.lessons.includes(num)); }
 function openReader(num){
   curLesson=LMAP[num];
+  const ch=chapterOf(num); if(ch) curChapter=ch;
   saveLast(THEME.category,num);
-  el('rTag').textContent='LEÇON '+curLesson.n;
+  const list=curChapter?curChapter.lessons:[num];
+  const idx=list.indexOf(num), total=list.length, hasNext=idx>=0&&idx<total-1;
+  el('rTag').textContent=(curChapter?curChapter.title+' · ':'')+(idx>=0?(idx+1)+'/'+total:'');
   el('rScroll').innerHTML='<h2>'+curLesson.title+'</h2>'+curLesson.blocks.map(renderBlock).join('');
-  el('rCta').textContent=done.has(curLesson.n)?'✓ Terminé — relire':'Marquer comme terminé';
+  const cta=el('rCta');
+  if(done.has(curLesson.n)) cta.textContent=hasNext?'Leçon suivante →':'Revenir au chapitre';
+  else cta.textContent=hasNext?'Terminé, suivante →':'Terminer le chapitre ✓';
   el('reader').classList.add('open'); el('rScroll').scrollTop=0;
 }
 function closeReader(){el('reader').classList.remove('open');}
 function completeLesson(){
-  const already=done.has(curLesson.n);
   done.add(curLesson.n); save(); markActiveToday();
-  let msg='✅ Leçon terminée !';
-  const ch=THEME.chapters.find(c=>c.lessons.includes(curLesson.n));
-  if(ch && ch.lessons.every(x=>done.has(x))) msg='🎉 Chapitre terminé : '+ch.title+' !';
-  if(THEME.lessons.every(l=>done.has(l.n))) msg='🏆 Thème '+((DATA.categories.find(c=>c.id===THEME.category)||{}).label||'')+' terminé !';
-  const nb=newBadge();
-  if(!already) showToast(nb ? ('🏅 Badge débloqué : '+nb.bl) : msg);
-  renderMain(); closeReader();
+  const nb=newBadge(); // met à jour l'état des badges
+  const ch=curChapter||chapterOf(curLesson.n);
+  let toast=null;
+  if(THEME.lessons.every(l=>done.has(l.n))) toast='🏆 Thème '+((DATA.categories.find(c=>c.id===THEME.category)||{}).label||'')+' terminé !';
+  else if(ch && ch.lessons.every(x=>done.has(x))) toast='🎉 Chapitre terminé : '+ch.title+' !';
+  else if(nb) toast='🏅 Badge débloqué : '+nb.bl;
+  if(toast) showToast(toast);
+  renderMain();
+  // continuité : enchaîner la leçon suivante du chapitre
+  const list=ch?ch.lessons:[curLesson.n];
+  const idx=list.indexOf(curLesson.n);
+  if(idx>=0 && idx<list.length-1) openReader(list[idx+1]);
+  else closeReader();
 }
 
 function renderBlock(b){
